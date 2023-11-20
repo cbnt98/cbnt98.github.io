@@ -115,8 +115,8 @@ img[class = "contentImg"]{
   /* margin-right: 80px; */
   /* margin-left: 40px; */
   margin-top: 15vh;
-  margin-right: 20vh;
-  margin-left: 10vh;
+  margin-right: 15vh;
+  margin-left: 15vh;
   
   /* height: 200px; */
   max-height: 35vh;
@@ -127,8 +127,8 @@ img[class = "contentImg"]{
 p[class = "imgComment"]{
   writing-mode: horizontal-tb;
   display: inline-block;
-  margin-right: 20vh;
-  margin-left: 10vh;
+  /* margin-right: 20vh; */
+  /* margin-left: 10vh; */
   margin-top: 0;
   font-size: 14px;
   text-align:center;
@@ -157,6 +157,14 @@ li[class = "mainBody"]{
   pointer-events: none;
   opacity: 0;
   transition: 0.25s ease-out;
+
+   /* これを追加 */
+   overscroll-behavior: contain;
+   overflow-x: scroll;
+   scrollbar-width: none;
+   -ms-overflow-style: none;
+   touch-action: none;
+  touch-action: none;
 }
 
 .modal-wrapper.show {
