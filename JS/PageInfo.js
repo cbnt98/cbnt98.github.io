@@ -60,6 +60,7 @@ function WritePageList(){   //全ページのリストを作る
         // pages[i].GetPageInfo;
         var li = document.createElement('li');
         li.setAttribute('class','content');
+        
         var a = document.createElement('a');
         a.setAttribute('href', "page" + i + ".html");
         a.textContent = pages[i].title+'（'+ pages[i].date+')';
@@ -69,7 +70,7 @@ function WritePageList(){   //全ページのリストを作る
 
         var p = document.createElement('p');
         p.setAttribute('class','contentComment');
-        p.textContent = pages[i].date + ' ' + pages[i].memo + ' <' + pages[i].categorie + '> '
+        p.textContent = pages[i].date + ' ' + pages[i].memo + ' <' + pages[i].categorie + '> ';
 
         document.getElementById('contentsList').appendChild(p);
 

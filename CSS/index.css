@@ -122,9 +122,18 @@ img[class = "contentImg"]{
   max-height: 35vh;
   max-width: 100vw;
   background-color: whitesmoke;
-  display: flex;
-   
+  display: inline-block;
 }
+p[class = "imgComment"]{
+  writing-mode: horizontal-tb;
+  display: inline-block;
+  margin-right: 20vh;
+  margin-left: 10vh;
+  margin-top: 0;
+  font-size: 14px;
+  text-align:center;
+}
+
 
 ul[class = "mainBody"]{
   display: flex;
