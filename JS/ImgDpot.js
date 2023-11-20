@@ -11,7 +11,7 @@ class imageClass {
     }
 }
 
-var contentImages = [
+var contentImgs = [
     new imageClass(1,0,"熊本旅行中、阿蘇","2023-3"),
     new imageClass(1,1,"EPFL コミュニティーラーニングセンター、スイス　ローザンヌ", "2023-9"),
     new imageClass(1,2,"自宅","2023-11"),
@@ -26,7 +26,7 @@ function WriteImage(x,y){
     var p = document.createElement('p');
     p.setAttribute('class','imgComment');
 
-    var image = contentImages.find(i => i.pageNo === x ,h => h.imgNo === y);
+    var targetImg = contentImgs.find(i => i.pageNo === x ,h => h.imgNo === y);
 
-    p.textContent = image.coment + ' <' + image.date + ">";
+    p.textContent = targetImg.coment + ' <' +  targetImg.date + ">";
 }
