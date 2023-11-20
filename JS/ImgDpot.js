@@ -18,15 +18,20 @@ var contentImgs = [
     new imageClass(0,0,"","")
 ];
 
-function WriteImage(x,y){
-    var img = document.createElement('img');
-    img.setAttribute('src','Img/'+x+'-'+y+'.jpg');
-    img.setAttribute('class', 'contentImg');
+function WriteImage(x){
+    var pageImgs = contentImgs.filter(i => i.pageNo === x);
+    for (let i = 0; i < pageImgs.length; i++){
+        var img = document.createElement('img');
+        img.setAttribute('src','Img/' + x + '-' + i + '.jpg');
+        img.setAttribute('class', 'contentImg');
 
-    var p = document.createElement('p');
-    p.setAttribute('class','imgComment');
+        var p = document.createElement('p');
+        p.setAttribute('class','imgComment');
 
-    var targetImg = contentImgs.find(i => i.pageNo === x ,h => h.imgNo === y);
+        var targetImg = contentImgs.find(h => h.imgNo === i);
+        p.textContent = targetImg.comment + ' <' +  targetImg.date + ">";
 
-    p.textContent = targetImg.coment + ' <' +  targetImg.date + ">";
+        document.getElementById('Img'+x+'-'+i).appendChild(img)
+        document.getElementById('Img'+x+'-'+i).appendChild(p)
+    }    
 }
