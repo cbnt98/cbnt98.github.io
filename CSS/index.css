@@ -163,8 +163,7 @@ li[class = "mainBody"]{
    overflow-x: scroll;
    scrollbar-width: none;
    -ms-overflow-style: none;
-   touch-action: none;
-  touch-action: none;
+
 }
 
 .modal-wrapper.show {
