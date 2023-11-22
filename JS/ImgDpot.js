@@ -18,6 +18,7 @@ var contentImgs = [
     new imageClass(0,0,"","")
 ];
 
+// あるページの画像を全て、配置する。
 function WriteImage(x){
     var pageImgs = contentImgs.filter(i => i.pageNo === x);
     for (let i = 0; i < pageImgs.length; i++){
@@ -33,5 +34,18 @@ function WriteImage(x){
 
         document.getElementById('Img'+x+'-'+i).appendChild(img)
         document.getElementById('Img'+x+'-'+i).appendChild(p)
+    }    
+}
+
+function WriteImageForList(x){
+    var pageImgs = contentImgs.filter(i => i.pageNo === x);
+    for (let i = 0; i < pageImgs.length; i++){
+        var img = document.createElement('img');
+        img.setAttribute('src','Img/' + x + '-' + i + '.jpg');
+        img.setAttribute('class', 'contentImg');
+
+        var li = document.createElement('li')
+
+        document.getElementById('contentsList').appendChild(img)
     }    
 }

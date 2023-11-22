@@ -23,8 +23,8 @@ var header = `
     </li>
     
     <li id = "headerList">
-      <a href="links.html">
-        Links
+      <a href="imageList.html">
+        Images
       </a>
     </li>
     

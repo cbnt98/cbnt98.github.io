@@ -30,29 +30,6 @@ var pages = [
     new pageClass("ソニックアドベンチャーで遊ぶ","2023-5-3","TVゲーム","PS3移植版",["ゲーム"],"2"),
 ];
 
-function PageInfo(page){
-    switch(page){
-        case 0:
-            pageTitle = "ブログを始めました";
-            pageDate = "2023-4-15";
-            categorie = "お知らせ";
-            PageMemo = "初めましてのごあいさつ";
-            break;
-        case 1:
-            pageTitle = "背景の写真について";
-            pageDate = "2023-4-15";
-            categorie = "写真";
-            PageMemo = "フィルムで撮った写真";
-            break;
-        case 2:
-            pageTitle = "このブログの構造";
-            pageDate = "2023-5-3";
-            categorie = "写真";
-            PageMemo = "なかなか凝っている";
-            break;
-    }
-}
-
 function WritePageList(){   //全ページのリストを作る
     // document.write(`<ul class="contentsList">`);
     for(i=2; i >=0; i--){
@@ -63,7 +40,11 @@ function WritePageList(){   //全ページのリストを作る
         
         var a = document.createElement('a');
         a.setAttribute('href', "page" + i + ".html");
-        a.textContent = pages[i].title+'（'+ pages[i].date+')';
+
+        var span = document.createElement('span');
+        span.setAttribute('style', "background-color:whitesmoke");
+        a.appendChild(span);
+        span.textContent = pages[i].title+'（'+ pages[i].date+')';
 
         document.getElementById('contentsList').appendChild(li);
         li.appendChild(a);
@@ -73,18 +54,30 @@ function WritePageList(){   //全ページのリストを作る
         p.textContent = pages[i].date + ' ' + pages[i].memo + ' <' + pages[i].categorie + '> ';
 
         document.getElementById('contentsList').appendChild(p);
-
-
-        /*
-        document.write(`
-        <li class="content"><a href= "page`+pages[i].pageNum+`.html">`+pages[i].title+`（`+ pages[i].date+`)</a></li>
-        <p class="contentComment">`+ pages[i].date+ ` `+pages[i].Memo+` #`+ pages[i].categorie+`</p>
-        `);*/
     }
-    // document.write(`</ul>`);
 }
+
+function WriteTitleAndDate(i){   //一つのページ情報を書く
+    var li = document.createElement('li');
+    li.setAttribute('class','content');
+    
+    var a = document.createElement('a');
+    a.setAttribute('href', "page" + i + ".html");
+
+    var span = document.createElement('span');
+    span.setAttribute('style', "background-color:whitesmoke");
+    a.appendChild(span);
+    span.textContent = pages[i].title+'（'+ pages[i].date+')';
+
+    document.getElementById('contentsList').appendChild(li);
+    li.appendChild(a);
+}
+
+
 function WritePageTitle(x){  //一つだけのリストを作る。各ページの先頭に置く
-    document.write(`<p id = "pageTitle"><span style="background-color:whitesmoke"`);
-    document.write(pages[x].title);
-    document.write(`</span></p>`);
+    var span = document.createElement('span');
+    span.setAttribute('style', "background-color:whitesmoke");
+    document.getElementById('pageTitle').appendChild(span);
+
+    span.textContent = pages[x].title+'（'+ pages[x].date+')';
 }

@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -10,31 +9,24 @@
 
     <link rel="stylesheet" href="CSS/index.css">
 
-    <script src="JS/SelectColor.js">s</script>
     <script src="JS/header.js"></script>
     <script src="JS/PageInfo.js"></script>
     <script src="JS/ImgDpot.js"></script>
-    <script>
-    // SelectTheme(0);
-    </script>
 
   </head>
 
   <body>
     <img class="backGround" src="BGImg/5.JPG">
-    <!-- <div class="image"></div> -->
-    <!-- <img id = "zommBackBGImg" src="BGImg/白黒グラデ.png"> -->
+    
 
     <div class="modal-wrapper">
       <img src="" alt="" class="modal-image">
     </div>
 
     <script> document.write(header);</script>
-
-    <!-- <script>pages[1].WritePageInfo()</script> -->
-    <script>WritePageTitle(1)</script>
     
-    <p id = "pageTitle">今までのカメラ</p>
+    <p id = "pageTitle"></p>
+    
 
     <p class = "mainBody">
       背景写真は大学一年の春に京都へ行った時のものです。<br>
@@ -44,16 +36,15 @@
       その後、自分で買ったRX100はファインダーもないし、ズームが電子制御であんまり楽しくなかった。
       それでも、取り回しが良いカメラが一番と信じ込んでいたので2〜3年ぐらい使いました。
     </p>
-    
+
     <div id="Img1-0"></div>
     <div id="Img1-1"></div>
     <div id="Img1-2"></div>
 
-    <script> 
-      WriteImage(1);
-    </script>
 
 
+    <script>WritePageTitle(1);</script>
+    <script> WriteImage(1);</script>
     <script src="JS/ImgZoom.js"></script>
 
   </body>
