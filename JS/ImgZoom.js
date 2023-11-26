@@ -7,7 +7,7 @@ images.forEach(function(image) {
           modalWrapper.classList.add('show');
           mdImg.classList.add('show');
 
-          var imageSrc = image.getAttribute('src');
+          var imageSrc = image.getAttribute('data-src');
           mdImg.src = imageSrc;
      });
 });
