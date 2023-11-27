@@ -44,6 +44,8 @@ function WriteImageForList(x){
         var img = document.createElement('img');
         img.setAttribute('src','Img/' + x + '-' + i + '.jpg');
         img.setAttribute('class', 'contentImg');
+        img.setAttribute('data-src', 'ImgBig/' + x + '-' + i + '.jpg')
+
 
         var li = document.createElement('li')
 
