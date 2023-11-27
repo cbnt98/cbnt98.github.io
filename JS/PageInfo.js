@@ -1,33 +1,32 @@
-var allPageNum = 2;
-var pageTitle = "PageTitle";    //1
-var pageDate = "0000-00-00";    //2
-var categorie = "categorie";    //3
-var PageMemo = "memo";          //4
-
-var url = "index.Html";
-var tagNum;
-var tag = Array[tagNum]
-
-
 class pageClass {
     // ...クラスの内容をここで定義する
-    constructor(title, date, categorie, comment, tags,pageNum) { /* コンストラクタ */
+    constructor(title, date, categorie, memo, tags) { /* コンストラクタ */
         this.title = title;
         this.date = date;
         this.categorie = categorie;
-        this.memo = comment;
+        this.memo = memo;
         this.tags = tags;
-        this.pageNum = pageNum;
     }
     GetPageInfo() {  /* メソッド */
         return ;  /* x と y を足した値を返却する */
     }
 }
 
+var tags = [
+    'お知らせ',//0
+    'TVゲーム',//1
+    'カメラ',//2
+    'お絵かき',//3
+    'おでかけ',//4
+    '雑記',//5
+    'パソコン・タブレット'//6
+]
+
 var pages = [
-    new pageClass("ブログを作りました","2023-4-15","お知らせ","",["お知らせ","お知らせ"],"0"),
-    new pageClass("今まで使ったカメラたち","2023-4-15","写真","懐かしい",["写真"],"1"),
-    new pageClass("ソニックアドベンチャーで遊ぶ","2023-5-3","TVゲーム","PS3移植版",["ゲーム"],"2"),
+                //title,date,categorie,memo,tags
+    new pageClass("ブログを作りました","2023-4-15","お知らせ","",["お知らせ"]),
+    new pageClass("今まで使ったカメラたち","2023-4-15","写真","懐かしい",["写真"]),
+    new pageClass("ソニックアドベンチャーで遊ぶ","2023-5-3","TVゲーム","PS3移植版",["ゲーム"]),
 ];
 
 function WritePageList(){   //全ページのリストを作る
@@ -80,4 +79,9 @@ function WritePageTitle(x){  //一つだけのリストを作る。各ページ�
     document.getElementById('pageTitle').appendChild(span);
 
     span.textContent = pages[x].title+'（'+ pages[x].date+')';
+}
+
+function WriteTagList(){
+    var li = document.write
+
 }
