@@ -24,9 +24,9 @@ var tags = [
 
 var pages = [
                 //title,date,categorie,memo,tags
-    new pageClass("ブログを作りました","2023-4-15","お知らせ","",["お知らせ"]),
-    new pageClass("今まで使ったカメラたち","2023-4-15","写真","懐かしい",["写真"]),
-    new pageClass("ソニックアドベンチャーで遊ぶ","2023-5-3","TVゲーム","PS3移植版",["ゲーム"]),
+    new pageClass("ブログを作りました","2023-4-15","お知らせ","",[0]),
+    new pageClass("今まで使ったカメラたち","2023-4-15","写真","懐かしい",[2]]),
+    new pageClass("ソニックアドベンチャーで遊ぶ","2023-5-3","TVゲーム","PS3移植版",[1]),
 ];
 
 function WritePageList(){   //全ページのリストを作る
@@ -85,15 +85,15 @@ function WriteTagList(){
     
     for(i = 0; i <= tags.length; i++){
         var tagPages = pages.filter(h => h.tags === i);
-
-        var li = document.createElement('li');
-        var a = document.createElement('a');
-
-        document.getElementById('tagList').appendChild(li);
-        li.appendChild(a);
-
-        a.textContent = tags[i] + ' ('+ tagPages.length + ')'
-
+        if(tagPages.length > 0){
+            var li = document.createElement('li');
+            var a = document.createElement('a');
+    
+            document.getElementById('tagList').appendChild(li);
+            li.appendChild(a);
+    
+            a.textContent = tags[i] + ' ('+ tagPages.length + ')'
+        }
     }
 
 }
