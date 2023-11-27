@@ -82,6 +82,18 @@ function WritePageTitle(x){  //一つだけのリストを作る。各ページ�
 }
 
 function WriteTagList(){
-    var li = document.write
+    
+    for(i = 0; i <= tags.length; i++){
+        var tagPages = pages.filter(h => h.tags === i);
+
+        var li = document.createElement('li');
+        var a = document.createElement('a');
+
+        document.getElementById('tagList').appendChild(li);
+        li.appendChild(a);
+
+        a.textContent = tags[i] + ' ('+ tagPages.length + ')'
+
+    }
 
 }
