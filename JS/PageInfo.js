@@ -1,6 +1,7 @@
 class pageClass {
     // ...クラスの内容をここで定義する
-    constructor(title, date, categorie, memo, tags) { /* コンストラクタ */
+    constructor(page ,title, date, categorie, memo, tags) { /* コンストラクタ */
+        this.page = page
         this.title = title;
         this.date = date;
         this.categorie = categorie;
@@ -23,10 +24,10 @@ var tags = [
 ]
 
 var pages = [
-                //title,date,categorie,memo,tags
-    new pageClass("ブログを作りました","2023-4-15","お知らせ","",[0]),
-    new pageClass("今まで使ったカメラたち","2023-4-15","写真","懐かしい",[2]]),
-    new pageClass("ソニックアドベンチャーで遊ぶ","2023-5-3","TVゲーム","PS3移植版",[1]),
+                //page,title,date,categorie,memo,tags
+    new pageClass(0,"ブログを作りました","2023-4-15","お知らせ","",0),
+    new pageClass(1,"今まで使ったカメラたち","2023-4-15","写真","懐かしい",2),
+    new pageClass(2,"ソニックアドベンチャーで遊ぶ","2023-5-3","TVゲーム","PS3移植版",1),
 ];
 
 function WritePageList(){   //全ページのリストを作る
@@ -85,15 +86,63 @@ function WriteTagList(){
     
     for(i = 0; i <= tags.length; i++){
         var tagPages = pages.filter(h => h.tags === i);
-        if(tagPages.length > 0){
+        if(tagPages.length >= 0){
             var li = document.createElement('li');
             var a = document.createElement('a');
     
             document.getElementById('tagList').appendChild(li);
             li.appendChild(a);
-    
-            a.textContent = tags[i] + ' ('+ tagPages.length + ')'
+            
+            var ul = document.createElement('ul');
+            ul.setAttribute('id','tagpagesList'+i);
+            
+            a.setAttribute('id','tag'+i);
+            a.textContent = "1"
+            a.innerHTML= '<input type = "radio" name = "tag" value = "'+ i + '" >' + tags[i] + ' ('+ tagPages.length + ')';
         }
     }
 
+    var buttoms = document.getElementsByName('tag');
+    for (i = 0; i <= buttoms.length; i++){
+        buttoms[i].addEventListener('click', CheckRadioButtons())
+    }
+
 }
+
+function CheckRadioButtons(){
+    var buttoms = document.getElementsByName('tag');
+    for (i = 0; i <= buttoms.length; i++){  //iはボタンの番号
+        if (buttoms.item(i).checked){
+            WritePagesOfTag(i); 
+            console.log("on_"+i);
+        }
+        else{
+            var ul = document.getElementById('tagpagesList'+i);
+            // ul.innerHTML = "/";
+            // console.log("off_"+i);
+        }
+    }
+}
+
+
+
+
+
+function WritePagesOfTag(x){
+    var tagPages = pages.filter(h => h.tags === x);
+
+    // var ul = document.createElement('ul');
+    // document.getElementById('tag'+x).appendChild(ul);
+
+    for(i = 0; i <= tagPages.length; i++){
+        var li = document.createElement('li');
+        document.getElementById('tagpagesList'+x).appendChild(li);
+        
+        var a = createElement('a');
+        li.appendChild(a);
+
+        a.setAttribute('href', "page" + tagPages[i].page + ".html");
+        a.textContent = tagPages[i].title;
+    }
+}
+

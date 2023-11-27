@@ -201,3 +201,6 @@ ul>img[class='contentImg']{
     display: inline-block;
 }
 
+input[type = 'button']{
+  width:3em; height:10em;  border: dashed 1px #906e84; border-radius: 10px; cursor: pointer; background-color: #eee;
+}
