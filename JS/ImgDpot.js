@@ -15,7 +15,7 @@ var contentImgs = [
     new imageClass(1,0,"熊本旅行中、阿蘇","2023-3"),
     new imageClass(1,1,"EPFL コミュニティーラーニングセンター、スイス　ローザンヌ", "2023-9"),
     new imageClass(1,2,"自宅","2023-11"),
-    new imageClass(0,0,"","")
+    // new imageClass(0,0,"","")
 ];
 
 // あるページの画像を全て、配置する。

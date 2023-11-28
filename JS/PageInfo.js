@@ -23,6 +23,7 @@ var tags = [
     'パソコン・タブレット'//6
 ]
 
+
 var pages = [
                 //page,title,date,categorie,memo,tags
     new pageClass(0,"ブログを作りました","2023-4-15","お知らせ","",0),
@@ -84,43 +85,55 @@ function WritePageTitle(x){  //一つだけのリストを作る。各ページ�
 
 function WriteTagList(){
     
-    for(i = 0; i <= tags.length; i++){
+    for(i = 0; i <= tags.length+1; i++){
         var tagPages = pages.filter(h => h.tags === i);
-        if(tagPages.length >= 0){
+        if(tagPages.length > 0){
             var li = document.createElement('li');
-            var a = document.createElement('a');
+            var d = document.createElement('details');
     
             document.getElementById('tagList').appendChild(li);
-            li.appendChild(a);
-            
+            li.appendChild(d);
+
+            var s = document.createElement('summary');
+            // s.setAttribute('class','whitebox')
+            s.textContent = tags[i];
+            d.appendChild(s);
             var ul = document.createElement('ul');
-            ul.setAttribute('id','tagpagesList'+i);
-            
-            a.setAttribute('id','tag'+i);
-            a.textContent = "1"
-            a.innerHTML= '<input type = "radio" name = "tag" value = "'+ i + '" >' + tags[i] + ' ('+ tagPages.length + ')';
+            d.appendChild(ul);
+
+            for(h = 0; h <= tagPages.length-1; h ++){
+                var p = document.createElement('li');
+                var a = document.createElement('a');
+                ul.appendChild(p);
+                p.appendChild(a);
+                a.setAttribute('href', "page" + tagPages[h].page + ".html");
+                a.setAttribute('class','whitebox')
+                a.textContent = pages[i].title+'（'+ pages[i].date+')';
+            }        
         }
     }
 
     var buttoms = document.getElementsByName('tag');
     for (i = 0; i <= buttoms.length; i++){
-        buttoms[i].addEventListener('click', CheckRadioButtons())
+        // buttoms[i].addEventListener('onclick', CheckRadioButtons(buttoms[i].value))
     }
 
 }
 
-function CheckRadioButtons(){
-    var buttoms = document.getElementsByName('tag');
-    for (i = 0; i <= buttoms.length; i++){  //iはボタンの番号
-        if (buttoms.item(i).checked){
-            WritePagesOfTag(i); 
-            console.log("on_"+i);
-        }
-        else{
-            var ul = document.getElementById('tagpagesList'+i);
-            // ul.innerHTML = "/";
-            // console.log("off_"+i);
-        }
+function CheckRadioButtons(x){
+    var tagPages = pages.filter(h => h.tags === x);
+    var ul = document.getElementById('tagPagesList');
+
+    console.log("addd")
+    for(i = 0; i <= tagPages.length+1; i++){
+        var li = document.createElement('li');
+        ul.appendChild(li);
+
+        var a = document.createElement('a');
+        li.appendChild(a);
+
+        a.setAttribute('href', "page" + tagPages.page + ".html");
+        a.textContent = tagPages.title;
     }
 }
 
@@ -134,9 +147,9 @@ function WritePagesOfTag(x){
     // var ul = document.createElement('ul');
     // document.getElementById('tag'+x).appendChild(ul);
 
-    for(i = 0; i <= tagPages.length; i++){
+    for(i = 0; i <= tagPages.length+1; i++){
         var li = document.createElement('li');
-        document.getElementById('tagpagesList'+x).appendChild(li);
+        document.getElementById('tagPagesList').appendChild(li);
         
         var a = createElement('a');
         li.appendChild(a);
