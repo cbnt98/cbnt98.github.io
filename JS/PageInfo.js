@@ -85,7 +85,7 @@ function WritePageTitle(x){  //一つだけのリストを作る。各ページ�
 
 function WriteTagList(){
     
-    for(i = 0; i <= tags.length+1; i++){
+    for(i = 0; i < tags.length; i++){
         var tagPages = pages.filter(h => h.tags === i);
         if(tagPages.length > 0){
             var li = document.createElement('li');
@@ -101,61 +101,16 @@ function WriteTagList(){
             var ul = document.createElement('ul');
             d.appendChild(ul);
 
-            for(h = 0; h <= tagPages.length-1; h ++){
+            for(h = 0; h < tagPages.length; h ++){
                 var p = document.createElement('li');
                 var a = document.createElement('a');
                 ul.appendChild(p);
                 p.appendChild(a);
                 a.setAttribute('href', "page" + tagPages[h].page + ".html");
                 a.setAttribute('class','whitebox')
-                a.textContent = pages[i].title+'（'+ pages[i].date+')';
+                a.textContent = tagPages[h].title+'（'+ tagPages[h].date+')';
             }        
         }
-    }
-
-    var buttoms = document.getElementsByName('tag');
-    for (i = 0; i <= buttoms.length; i++){
-        // buttoms[i].addEventListener('onclick', CheckRadioButtons(buttoms[i].value))
-    }
-
-}
-
-function CheckRadioButtons(x){
-    var tagPages = pages.filter(h => h.tags === x);
-    var ul = document.getElementById('tagPagesList');
-
-    console.log("addd")
-    for(i = 0; i <= tagPages.length+1; i++){
-        var li = document.createElement('li');
-        ul.appendChild(li);
-
-        var a = document.createElement('a');
-        li.appendChild(a);
-
-        a.setAttribute('href', "page" + tagPages.page + ".html");
-        a.textContent = tagPages.title;
-    }
-}
-
-
-
-
-
-function WritePagesOfTag(x){
-    var tagPages = pages.filter(h => h.tags === x);
-
-    // var ul = document.createElement('ul');
-    // document.getElementById('tag'+x).appendChild(ul);
-
-    for(i = 0; i <= tagPages.length+1; i++){
-        var li = document.createElement('li');
-        document.getElementById('tagPagesList').appendChild(li);
-        
-        var a = createElement('a');
-        li.appendChild(a);
-
-        a.setAttribute('href', "page" + tagPages[i].page + ".html");
-        a.textContent = tagPages[i].title;
     }
 }
 
