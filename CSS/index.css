@@ -10,6 +10,9 @@
 body::-webkit-scrollbar{
   display: none;
 }
+html{
+  overflow-y: hidden;
+}
 
 /* 横書き */
 body{ 
