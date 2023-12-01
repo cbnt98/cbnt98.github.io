@@ -30,6 +30,13 @@ var contentImgs = [
 // あるページの画像を全て、配置する。
 function WriteImage(x){
     var pageImgs = contentImgs.filter(i => i.pageNo === x);
+
+    var BGdiv = document.getElementById('Img0');
+    var BGImg = document.createElement('Img');
+    BGdiv.appendChild(BGImg);
+    BGImg.setAttribute('class','backGround');
+    BGImg.setAttribute('src','ImgBig/' + x + '-0.jpg');
+
     for (let i = 1; i < pageImgs.length; i++){
         var img = document.createElement('img');
         img.setAttribute('src','Img/' + x + '-' + i + '.jpg');
@@ -42,8 +49,8 @@ function WriteImage(x){
         var targetImg = pageImgs.find(h => h.imgNo === i);
         p.textContent = targetImg.comment + ' <' +  targetImg.date + ">";
 
-        document.getElementById('Img'+x+'-'+i).appendChild(img)
-        document.getElementById('Img'+x+'-'+i).appendChild(p)
+        document.getElementById('Img'+i).appendChild(img)
+        document.getElementById('Img'+i).appendChild(p)
     }    
 }
 
