@@ -83,6 +83,43 @@ function WritePageTitle(x){  //一つだけのリストを作る。各ページ�
     span.textContent = pages[x].title+'（'+ pages[x].date+')';
 }
 
+function WritePageContoroller(x){
+
+    var d = document.getElementById("PageController");
+    var b = document.createElement('a');
+    var n = document.createElement('a');
+    var p = document.createElement('p');
+
+
+    b.setAttribute('id','back');
+    p.setAttribute('id','HeadTitle');
+    n.setAttribute('id','next');
+
+    d.appendChild(n);
+    d.appendChild(b);
+    d.appendChild(p);
+
+    if(x === 0){
+        n.setAttribute('href','page'+(x+1)+'.html');
+        n.textContent = '<' + (x+2) + '. '+ pages[(x+1)].title;
+    }
+    else if(x === pages.length-1){
+        b.setAttribute('href','page'+(x-1)+'.html');
+        b.textContent = x + '. '+ pages[(x-1)].title + '>';
+
+    }
+    else{
+        b.setAttribute('href','page'+(x-1)+'.html');
+        n.setAttribute('href','page'+(x+1)+'.html');
+
+        b.textContent = x + '. '+ pages[(x-1)].title + '>';
+        n.textContent = '<' + (x+2) + '. '+ pages[(x+1)].title;
+    }
+
+    p.textContent = x+1 + '. '+ pages[x].title;
+    
+}
+
 function WriteTagList(){
     
     for(i = 0; i < tags.length; i++){

@@ -12,12 +12,16 @@
     <script src="JS/header.js"></script>
     <script src="JS/PageInfo.js"></script>
     <script src="JS/ImgDpot.js"></script>
-
+    <script>var p = ｘ;</script>
   </head>
 
   <body>
-    <img class="backGround" src="ImgBig/X-0.jpg">
-    
+    <div id="Img0"></div>
+    <div id = "PageController"> 
+      <p id = "HeadTitle"> タイトる（）  </p>
+      <a id = 'back' href = 'page0.html'>＞0</a>
+      <a id = 'next' href = 'page2.html'>2＜</a>
+    </div>
 
     <div class="modal-wrapper">
       <img src="" alt="" class="modal-image">
@@ -32,18 +36,19 @@
 
     </p>
 
-    <div id="ImgX-1"></div>
-    <div id="ImgX-2"></div>
-    <div id="ImgX-3"></div>
-    <div id="ImgX-4"></div>
-    <div id="ImgX-5"></div>
-    <div id="ImgX-6"></div>
-    <div id="ImgX-7"></div>
-    <div id="ImgX-8"></div>
+    <div id="Img1"></div>
+    <div id="Img2"></div>
+    <div id="Img3"></div>
+    <div id="Img4"></div>
+    <div id="Img5"></div>
+    <div id="Img6"></div>
+    <div id="Img7"></div>
+    <div id="Img8"></div>
 
-    <script>WritePageTitle(X);</script>
-    <script> WriteImage(X);</script>
+    <script>WritePageTitle(p);</script>
+    <script> WriteImage(p);</script>
     <script src="JS/ImgZoom.js"></script>
+    <script>WritePageContoroller(p);</script>
 
   </body>
 

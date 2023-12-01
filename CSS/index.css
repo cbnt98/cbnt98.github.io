@@ -3,6 +3,12 @@
   font-family: serif; 
   /* text-shadow: whitesmoke 3px 3px 0px;zzzzzzzz */
   /* font-size: 0.3cm; */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar{
+  display: none;
 }
 
 /* 横書き */
@@ -70,6 +76,37 @@ li[id = "headerList"]{
   background-color: rgba(200,200,200, 0.5);
   height: fit-content;
   
+}
+
+/* ページ上部固定 */
+#PageController{
+  writing-mode: horizontal-tb;
+  z-index: 10000;
+  font-size: small;
+
+}
+#HeadTitle{
+  position: fixed;
+  left:50px;
+  top: 0px;
+  text-align:center;
+  background-color: rgba(200,200,200, 0.5);
+  width: fit-content;
+  margin-top: 5px;
+}
+#back{
+  position: fixed;
+  right:2vw;
+  background-color: rgba(200,200,200, 0.5);
+  width: fit-content;
+  bottom: 0px;
+}
+#next{
+  position: fixed;
+  left:2vw;
+  background-color: rgba(200,200,200, 0.5);
+  width: fit-content;
+  bottom: 0px;
 }
 
 
