@@ -101,19 +101,34 @@ function WritePageContoroller(x){
 
     if(x === 0){
         n.setAttribute('href','page'+(x+1)+'.html');
-        n.textContent = '<' + (x+2) + '. '+ pages[(x+1)].title;
+        if(window.outerWidth >= 550){
+            n.textContent = '<' + (x+2) + '. '+ pages[(x+1)].title;
+        }
+        else{
+            n.textContent = '< 次へ' ;
+        }
     }
     else if(x === pages.length-1){
         b.setAttribute('href','page'+(x-1)+'.html');
-        b.textContent = x + '. '+ pages[(x-1)].title + '>';
+        if(window.outerWidth >= 550){
+            b.textContent = x + '. '+ pages[(x-1)].title + '>';
+        }
+        else{
+            b.textContent = '前へ>';
+        }
 
     }
     else{
         b.setAttribute('href','page'+(x-1)+'.html');
         n.setAttribute('href','page'+(x+1)+'.html');
-
+        if(window.outerWidth >= 550){
         b.textContent = x + '. '+ pages[(x-1)].title + '>';
         n.textContent = '<' + (x+2) + '. '+ pages[(x+1)].title;
+        }
+        else{
+            n.textContent = '< 次へ' ;
+            b.textContent = '前へ>';
+        }
     }
 
     p.textContent = x+1 + '. '+ pages[x].title;

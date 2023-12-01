@@ -87,7 +87,7 @@ li[id = "headerList"]{
 }
 #HeadTitle{
   position: fixed;
-  left:50px;
+  left:2vw;
   top: 0px;
   text-align:center;
   background-color: rgba(200,200,200, 0.5);
