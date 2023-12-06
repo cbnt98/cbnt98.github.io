@@ -29,11 +29,12 @@ var pages = [
     new pageClass(0,"ブログを作りました。","2023-4-15","お知らせ","はじめまして",0),
     new pageClass(1,"今まで使ったカメラたち","2023-11-22","写真","結局今のカメラが一番好き。",2),
     new pageClass(2,"スイス・ローザンヌへ行きました。","2023-11-29","旅行","ただで行けた。ラッキー！",4),
+    new pageClass(3,"年越しに向けて","2023-12-5", "雑記", "色々と整理する",5 )
 ];
 
 function WritePageList(){   //全ページのリストを作る
     // document.write(`<ul class="contentsList">`);
-    for(i=2; i >=0; i--){
+    for(i=pages.length-1; i >=0; i--){
         // PageInfo(i);
         // pages[i].GetPageInfo;
         var li = document.createElement('li');

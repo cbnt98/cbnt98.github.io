@@ -23,7 +23,13 @@ var contentImgs = [
     new imageClass(2,4,"大学の学生寮","2023-9"),
     new imageClass(2,5,"みずうみ","2023-9"),
     new imageClass(2,6,"駅前","2023-9"),
-
+    new imageClass(3,0,"知らない街の丘の上","2020-11"),
+    new imageClass(3,1,"道","2021-11"),
+    new imageClass(3,2,"地下鉄駅(天神？）","2020-12"),
+    new imageClass(3,3,"駅2","2020-12"),
+    new imageClass(3,4,"駅3","2020-12"),
+    new imageClass(3,5,"駅4","2020-12"),
+    new imageClass(3,6,"朝イチのthinkpad","2023-11"),
     // new imageClass(0,0,"","")
 ];
 
