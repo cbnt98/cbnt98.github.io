@@ -86,7 +86,6 @@ li[id = "headerList"]{
   writing-mode: horizontal-tb;
   z-index: 10000;
   font-size: small;
-
 }
 #HeadTitle{
   position: fixed;
@@ -102,14 +101,14 @@ li[id = "headerList"]{
   right:2vw;
   background-color: rgba(200,200,200, 0.5);
   width: fit-content;
-  bottom: 10px;
+  bottom: 15px;
 }
 #next{
   position: fixed;
   left:2vw;
   background-color: rgba(200,200,200, 0.5);
   width: fit-content;
-  bottom: 10px;
+  bottom: 15px;
 }
 
 
