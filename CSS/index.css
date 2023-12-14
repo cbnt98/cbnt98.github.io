@@ -175,7 +175,8 @@ img[class = "contentImg"]{
   margin-top: 15vh;
   margin-right: 7vh;
   margin-left: 7vh;
-
+  max-height: 853px;
+  max-width: 1280px;
   max-height: 35vh;
   max-width: 100vw;
   background-color: whitesmoke;

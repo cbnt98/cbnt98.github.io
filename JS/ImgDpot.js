@@ -30,7 +30,11 @@ var contentImgs = [
     new imageClass(3,4,"駅3","2020-12"),
     new imageClass(3,5,"駅4","2020-12"),
     new imageClass(3,6,"朝イチのthinkpad","2023-11"),
-    // new imageClass(0,0,"","")
+    new imageClass(4,0,"駐輪場","2022-5"),
+    new imageClass(4,1,"寺の駐車場","2023-8"),
+    new imageClass(4,2,"開かれたiPod","2023-12"),
+    new imageClass(4,3,"WindowsPCを使って復元","2023-12")
+    // new imageClass(0,0,"",""),
 ];
 
 // あるページの画像を全て、配置する。
