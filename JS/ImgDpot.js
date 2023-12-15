@@ -33,7 +33,11 @@ var contentImgs = [
     new imageClass(4,0,"駐輪場","2022-5"),
     new imageClass(4,1,"寺の駐車場","2023-8"),
     new imageClass(4,2,"開かれたiPod","2023-12"),
-    new imageClass(4,3,"WindowsPCを使って復元","2023-12")
+    new imageClass(4,3,"WindowsPCを使って復元","2023-12"),
+    new imageClass(5,0,"道","2022-2"),
+    new imageClass(5,1,"サギってなんか好き","2023-11"),
+    new imageClass(5,2,"脇道の中の公園","2022-4"),
+    new imageClass(5,3,"確か唐津で撮った","2022-4"),
     // new imageClass(0,0,"",""),
 ];
 
