@@ -24,7 +24,7 @@ modalWrapper.addEventListener('click', function() {
 window.addEventListener('keydown',
 event => {
      let keys = event.key
-     alert(`${keys}`+'が押されました');
+     // alert(`${keys}`+'が押されました');
        if(keys === 'ArrowRight'){
           // alert(`${keys}`+'が押されました');
         }
