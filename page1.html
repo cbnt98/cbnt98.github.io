@@ -20,9 +20,6 @@
     <div id="Img0"></div>
     
     <div id = "PageController"> 
-      <!-- <a id = 'back' href = 'page0.html'>＞0</a>
-      <p id = "HeadTitle"> 2. タイトる  </p>
-      <a id = 'next' href = 'page2.html'>2＜</a> -->
     </div>
     <script>WritePageContoroller(p);</script>
 
@@ -30,7 +27,12 @@
     <div class="modal-wrapper">
       <img src="" alt="" class="modal-image">
     </div>
-
+    <p class = 'modal-text'>
+      <span class = 'modal-next'>＜次  </span>
+      <span class = 'modal-comment'></span>
+      <span class = 'modal-back'>  前＞</span>
+    </p>
+    
     <script> document.write(header);</script>
     
     <p id = "pageTitle"></p>
@@ -59,7 +61,6 @@
     <script>WritePageTitle(p);</script>
     <script> WriteImage(p);</script>
     <script src="JS/ImgZoom.js"></script>
-
   </body>
 
 </html> 

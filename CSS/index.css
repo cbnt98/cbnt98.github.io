@@ -5,6 +5,8 @@
   /* font-size: 0.3cm; */
   -ms-overflow-style: none;
   scrollbar-width: none;
+  scrollbar-width: none !important;  
+  -ms-overflow-style: none !important; 
 }
 
 body::-webkit-scrollbar{
@@ -247,6 +249,29 @@ li[class = "mainBody"]{
 .modal-image.show {
   opacity: 1;
 }
+
+.modal-text {
+  writing-mode: horizontal-tb;
+  z-index: -10;
+  position: fixed;
+  bottom: 0;
+  font-size: 14px;
+  text-align:center;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease-out;
+}
+.modal-text.show {
+  opacity: 1;
+  z-index: 10;
+}
+.modal-next {
+  color: blue;
+}
+.modal-back {
+  color: blue;
+}
+
 
 ul>img[class='contentImg']{
     z-index: 1;
