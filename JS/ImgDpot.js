@@ -56,6 +56,7 @@ function WriteImage(x){
         img.setAttribute('src','Img/' + x + '-' + i + '.jpg');
         img.setAttribute('class', 'contentImg');
         img.setAttribute('data-src', 'ImgBig/' + x + '-' + i + '.jpg');
+        img.setAttribute('id',i)
 
         var p = document.createElement('p');
         p.setAttribute('class','imgComment');
