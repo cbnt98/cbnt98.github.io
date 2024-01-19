@@ -38,6 +38,8 @@ var contentImgs = [
     new imageClass(5,1,"サギってなんか好き","2023-11"),
     new imageClass(5,2,"脇道の中の公園","2022-4"),
     new imageClass(5,3,"確か唐津で撮った","2022-4"),
+    new imageClass(6,0,"ピンクグラデ",""),
+    new imageClass(6,1,"かわいいスマホ、Jelly Star","2023-12"),
     // new imageClass(0,0,"",""),
 ];
 
