@@ -169,6 +169,7 @@ p[class = "mainBody"]{
   background-color: whitesmoke;
   /* display: inline-block; */
   z-index: 1;
+  
 }
 img[class = "contentImg"]{
   z-index: 1;
