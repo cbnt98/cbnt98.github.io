@@ -40,6 +40,9 @@ var contentImgs = [
     new imageClass(5,3,"確か唐津で撮った","2022-4"),
     new imageClass(6,0,"ピンクグラデ",""),
     new imageClass(6,1,"かわいいスマホ、Jelly Star","2023-12"),
+    new imageClass(7,0,"福岡市動物園のペンギン","2024-1"),
+    new imageClass(7,1,"動物園2","2024-1"),
+    new imageClass(7,2,"動物園3","2024-1"),
     // new imageClass(0,0,"",""),
 ];
 
