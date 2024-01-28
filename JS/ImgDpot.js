@@ -44,7 +44,7 @@ var contentImgs = [
     new imageClass(7,1,"動物園2","2024-1"),
     new imageClass(7,2,"動物園3","2024-1"),
     new imageClass(8,0,"糸島の駄菓子屋前","2023-12"),
-    
+    new imageClass(8,1,"...","2024-1"),
     // new imageClass(0,0,"",""),
 ];
 
