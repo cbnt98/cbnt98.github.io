@@ -45,6 +45,8 @@ var contentImgs = [
     new imageClass(7,2,"動物園3","2024-1"),
     new imageClass(8,0,"糸島の駄菓子屋前","2023-12"),
     new imageClass(8,1,"...","2024-1"),
+    new imageClass(9,0,"博物館","2022-7"),
+    new imageClass(9,1,"那覇空港のバス停","2022-7"),
     // new imageClass(0,0,"",""),
 ];
 
