@@ -300,3 +300,7 @@ input[type = 'button']{
 a:visited {
   color:mediumblue;
 }
+
+.whitebox{
+  margin-top: 10vh;
+}
