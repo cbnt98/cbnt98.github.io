@@ -45,12 +45,12 @@ header{
 }
 div[class="logo"]{
   font-family: Arial, Helvetica, sans-serif;
-  font-size: x-large;
+  font-size: xx-large;
   /* display: fixed; */
   margin-right:20px;
   margin-top: 0px;
   /* color:white; */
-  background-color: rgba(200,200,200, 0.5);
+  background-color: rgba(200,200,200, 1);
   height: fit-content;
   /* mix-blend-mode:difference; */
 }
@@ -59,7 +59,7 @@ div[class="sublogo"] {
   /* left: 20px; */
   /* display: fixed; */
   margin-top: 20px;
-  background-color: rgba(200,200,200, 0.5);
+  background-color: rgba(200,200,200, 1);
   height: fit-content;
   /* mix-blend-mode:exclusion; */
 
@@ -67,7 +67,7 @@ div[class="sublogo"] {
 ul[id="headerList"]{
   display: block;
   margin-top: 0px;
-  text-align:center;
+  text-align:center;t
   z-index: 1000;
   margin-right: 20px;
   margin-left: 20px;
@@ -78,7 +78,7 @@ li[id = "headerList"]{
   margin-top: 10px;
   text-align:center;
   z-index: 1;
-  background-color: rgba(200,200,200, 0.5);
+  background-color: rgba(200,200,200, 1);
   height: fit-content;
   
 }

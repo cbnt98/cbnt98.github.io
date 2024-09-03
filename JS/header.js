@@ -7,7 +7,7 @@ var header = `
 <!-- TODO:  Use a tags instead of ul -->
 
 <div class="logo">Cabinet (キャビネット)</div>
-<div class="sublogo">古い家具、新しい生活</div>
+<div class="sublogo">家具的なブログ..</div>
 <nav class="menu">
   <ul id= "headerList">
     <li id = "headerList">
