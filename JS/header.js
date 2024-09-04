@@ -1,7 +1,7 @@
 const BlogName = 'Cabinet (キャビネット)';
 const BlogSubText = '家具的なブログ..';
 
-class pageClass{
+class SubPageClass{
   constructor(title,file){
     this.title = title;
     this.file = file;
@@ -9,11 +9,11 @@ class pageClass{
 }
 
 var HeaderList = [
-  new pageClass('Top','index.html'),
-  new pageClass('Splendid Ocean Blue','movies.html'),
-  new pageClass('This is the way I like it','page.html'),
-  new pageClass('Cabinet','books.html'),
-  new pageClass('abaut','about.html'),
+  new SubPageClass('Top','index.html'),
+  new SubPageClass('Splendid Ocean Blue','movies.html'),
+  new SubPageClass('This is the way I like it','page.html'),
+  new SubPageClass('Cabinet','books.html'),
+  new SubPageClass('abaut','about.html'),
 ]
 
 
@@ -23,9 +23,10 @@ function writeHeader(){
     // Header.setAttribute('id', 'header');
 
     var Logo = document.createElement('div');
+    Header.appendChild(Logo);
     Logo.setAttribute('class', 'logo');
     Logo.textContent = BlogName;
-    Header.appendChild(Logo);
+    
 
     var SubLogo = document.createElement('div');
     SubLogo.setAttribute('class', 'sublogo');
@@ -55,29 +56,35 @@ function writeHeader(){
 var header = `
 <header id="header">
 
-<div class="logo">Cabinet (キャビネット)</div>
-<div class="sublogo">家具的なブログ..</div>
+<div class="logo">Table Of Contents</div>
+<div class="sublogo">キャビネットのブログ</div>
 
 
   <ul id= "headerList">
     <li id = "headerList">
-      <a href="index.html">
+      <a href="Home.html">
         Home
       </a>
     </li>
     
     <li id = "headerList">
-      <a href="categories.html">
-        Categories
+      <a href="SplendidOceanBlue.html">
+        Splendid Ocean Blue
       </a>
     </li>
     
     <li id = "headerList">
       <a href="imageList.html">
-        Images
+        That's The Way I Like It
       </a>
     </li>
-    
+
+    <li id = "headerList">
+      <a href="about.html">
+        Cabinet
+      </a>
+    </li>
+
     <li id = "headerList">
       <a href="about.html">
         About
