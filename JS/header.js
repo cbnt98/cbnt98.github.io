@@ -74,13 +74,13 @@ var header = `
     </li>
     
     <li id = "headerList">
-      <a href="imageList.html">
+      <a href="ThatsTheWayILikeIt.html">
         That's The Way I Like It
       </a>
     </li>
 
     <li id = "headerList">
-      <a href="about.html">
+      <a href="Cabinet.html">
         Cabinet
       </a>
     </li>
