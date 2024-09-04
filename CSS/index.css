@@ -7,18 +7,18 @@
   -ms-overflow-style: none !important; 
 }
 
-body::-webkit-scrollbar{
-  display: none;
-}
-html{
+  body::-webkit-scrollbar{
+    display: none;
+  }
+/* html{
   overflow-y: hidden;
-}
+} */
 
 body{ 
   text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
-
+  /* 横書き */
   /* -ms-writing-mode: tb-rl;
   -webkit-writing-mode: vertical-rl;
   writing-mode: vertical-rl; */
@@ -57,12 +57,9 @@ div[class="sublogo"] {
   background-color: whitesmoke;
 }
 ul[id="headerList"]{
-  /* display: block; */
   margin-top: 0px;
-  /* text-align:center; */
+  margin-left: -40px;
   z-index: 1000;
-  /* margin-right: 20px; */
-  /* margin-left: 20px; */
 }
 li[id = "headerList"]{
   display: inline-block;
