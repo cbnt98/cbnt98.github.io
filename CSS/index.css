@@ -33,7 +33,7 @@ body{
 
 div[id='main']{
   margin-left: 40px;
-  margin-right: 80px;
+  margin-right: 40px;
 }
 
 li{
@@ -135,7 +135,7 @@ p[id="pageTitle"]{
 }
 
 p[class = "mainBody"]{
-  margin-right: 40px;
+  /* margin-right: 40px; */
   min-height: 60%;
   max-height: 75%;
   background-color: whitesmoke;
