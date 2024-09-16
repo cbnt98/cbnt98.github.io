@@ -22,7 +22,7 @@ var books = [
 function WriteBookComments(){
     var P = document.getElementById('bookComments');
     for(let i = 0; i < books.length; i++){
-
+        $('#bookComments')
     }
 }
 

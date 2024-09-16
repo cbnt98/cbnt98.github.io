@@ -56,8 +56,8 @@ function writeHeader(){
 var header = `
 <header id="header">
 
-<div class="logo">Table Of Contents</div>
-<div class="sublogo">キャビネットのブログ</div>
+<div class="logo">キャビネット通信</div>
+<div class="sublogo">古い家具、新しい生活</div>
 
 
   <ul id= "headerList">
