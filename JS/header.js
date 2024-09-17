@@ -56,7 +56,7 @@ function writeHeader(){
 var header = `
 <header id="header">
 
-<div class="logo">かもひつじ通信</div>
+<div class="logo">羊の島</div>
 <div class="sublogo">Letters from the duck and the sheep.</div>
 
 
