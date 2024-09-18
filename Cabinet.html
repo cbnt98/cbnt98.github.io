@@ -6,16 +6,18 @@
   <meta name="robots" content="noindex,unfollow">
   <meta name="viewport" content="width=device-width">
   
-  <title>Table of Contents</title>
+  <title>羊の島</title>
 
   <link rel="stylesheet" href="CSS/index.css">
 
   <script src="JS/header.js"></script>
   <script src="JS/PageInfo.js"></script>
+  <script src="JS/Cabinet.js"></script>
 
 </head>
 
 <body>
+  <script src="JS/jquery-3.7.1.min.js"></script>
   <img class="backGround" src="BGImg/9.jpg">
 
   <script> document.write(header);</script>
@@ -40,35 +42,13 @@
       気持ちよく本とか漫画読める場所探して彷徨っている。東北に旅に出たい…福岡に帰りたい…
     </span>
     </p>
-    <img src = 'Cabinet/1.jpg' class = 'contentImg'>
-    <img src = 'Cabinet/2.jpg' class = 'contentImg'>
-    <img src = 'Cabinet/3.jpg' class = 'contentImg'>
-    <img src = 'Cabinet/4.jpg' class = 'contentImg'>
-    <img src = 'Cabinet/5.jpg' class = 'contentImg'>
-    <img src = 'Cabinet/6.jpg' class = 'contentImg'>
-    <p><span style="background-color:whitesmoke">
-      『フィッツジェラルド10傑作選』
-      スコット・フィッツジェラルド 村上春樹 編訳 <br>
-      村上春樹好きで初スコットフィッツジェラルド。
-      グレート・ギャツビーの映画は見たことあるけど。<br>
-      『氷の宮殿』が一番好きだった。
-      エッセイ『壊れる』三部作も何度か読み返した。
-      はずかしいけど、好きな文章をスケッチブックに写したりした（笑）。<br>
-      7月の終わりごろから読み始めて、出かけるときによく鞄の中に入れていたのに読み終わったのは9月。
-      午後のバイトの前に大濠公園のカフェでよく読んでいた。
-      <br><br>
-      『中国行きのスロー・ボート』村上春樹<br>
-      読み途中。
-      <br><br>
-      掃除婦のための手引書 ルシア・ベルリン 岸本佐知子 訳<br>
-      読み途中
-    </span>
-    </p>
-
-    <p id ='bookComments'></p>
-  </div>
-  
     
+    <div id = 'bookImages'></div>
+    <p id ='bookComments'></p>
+    
+  </div>
+    <script>WriteBookComments();</script>
+    <script>WriteBookImage();</script>
    </body>
 
 </html>

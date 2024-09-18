@@ -12,21 +12,49 @@ class bookClass {
 }
 
 var books = [
-    new bookClass('Cabinet/1.jpg','フィッツジェラルド10傑作選','スコット・フィッツジェラルド 村上春樹 編訳','読了',new Date(2024, 9, 12)),
-    new bookClass('Cabinet/2.jpg','中国行きのスロー・ボート','村上春樹 ','読み途中。',new Date(2024, 9, 13)),
-    new bookClass('Cabinet/3.jpg','掃除婦のための手引書','ルシア・ベルリン 岸本佐知子 訳','読み途中。',new Date(2024, 9, 12)),
-    new bookClass('Cabinet/4.jpg','ディザインズ','五十嵐大介','読了。',new Date(2024, 9, 14)),
-    new bookClass('Cabinet/5.jpg','村上さんのところ','村上春樹','読み途中。',new Date(2024, 9, 12)),
+    new bookClass('Cabinet/1.jpg','フィッツジェラルド10傑作選','スコット・フィッツジェラルド 村上春樹 編訳','読了',new Date(2024, 9 -1 , 12)),
+    new bookClass('Cabinet/2.jpg','中国行きのスロー・ボート','村上春樹 ','読み途中。',new Date(2024, 9 -1 , 13)),
+    new bookClass('Cabinet/3.jpg','掃除婦のための手引書','ルシア・ベルリン 岸本佐知子 訳','読み途中。',new Date(2024, 9-1 , 12)),
+    new bookClass('Cabinet/4.jpg','ディザインズ','五十嵐大介','読了。',new Date(2024, 9-1 , 14)),
+    new bookClass('Cabinet/5.jpg','村上さんのところ','村上春樹','読み途中。',new Date(2024, 9-1 , 12)),
+    new bookClass('Cabinet/6.jpg','スプートニクの恋人','村上春樹','思い出した。また読みたい。',new Date(2024, 9-1 , 16)),
+
 ]
 
-function WriteBookComments(){
-    var P = document.getElementById('bookComments');
-    for(let i = 0; i < books.length; i++){
-        $('#bookComments')
+function WriteBookImage(){
+    var d = document.getElementById('bookImages');
+    for(let  i = 0; i < books.length; i++){
+        var img =  document.createElement('img');
+        img.setAttribute('src','Cabinet/' + (i+1) + '.jpg');
+        img.setAttribute('class', 'contentImg');
+        img.setAttribute('id', (i+1));
+        d.appendChild(img);
     }
 }
 
-books[1].comment = 
+function WriteBookComments(){
+    var P = document.getElementById('bookComments');
+    var s = '<div class = "wrapper">'
+    for(let i = 0; i < books.length; i++){
+        s = s + '<div class="content"><span style="background-color:whitesmoke">『' + books[i].title + '』 ' + books[i].author + '<br>' + books[i].comment +'('+books[i].date.toLocaleDateString('sv-SE')+ ')'+'<br><br></div>';
+    }
+    P.innerHTML = s;
+}
+
+window.addEventListener('load', function() {
+    var menuItems = Array.from(document.getElementsByClassName('contentImg'));
+    var sections =  Array.from(document.getElementsByClassName('content'));
+    menuItems.forEach(function(item, i) {
+      var target = sections[i];
+      item.addEventListener('click', function() {
+        $('html,body').animate({
+          scrollTop: window.pageYOffset + target.getBoundingClientRect().top - 8 // 要素がブラウザ上部ぴったりになるので少し隙間をあけました
+        }, 500, 'swing');
+      });
+    });
+  });
+
+books[0].comment = 
 `
 スコット・フィッツジェラルド 村上春樹 編訳 <br>
 村上春樹好きで初スコットフィッツジェラルド。
@@ -38,7 +66,7 @@ books[1].comment =
 午後のバイトの前に大濠公園のカフェでよく読んでいた。
 `;
 
-books[4].comment = 
+books[3].comment = 
 `
 大好きな漫画。絵が良すぎる。本当に美しい。<br>
 一時期は1巻か2巻かを図書館でずっと模写していた。
