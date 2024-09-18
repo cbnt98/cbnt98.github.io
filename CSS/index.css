@@ -148,6 +148,7 @@ img[class = "contentImg"]{
   z-index: 1;
   margin-right: 10px;
   background-color: whitesmoke;
+  max-width: 25vw;
   /* display: inline-block; */
 }
 p[class = "imgComment"]{
