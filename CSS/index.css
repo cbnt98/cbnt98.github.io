@@ -32,7 +32,7 @@ body{
 }
 
 div[id='main']{
-  margin-left: 40px;
+  margin-left: 25px;
   margin-right: 30px;
 }
 
@@ -44,7 +44,7 @@ li{
 header{
   /* margin-top: 10px; */
 
-  margin-left: 40px;
+  margin-left: 25px;
 }
 div[class="logo"]{
   margin-top: 10px;
