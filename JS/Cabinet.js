@@ -36,7 +36,7 @@ function WriteBookComments(){
     var P = document.getElementById('bookComments');
     var s = '<div class = "wrapper">'
     for(let i = 0; i < books.length; i++){
-        s = s + '<div class="content"><span style="background-color:whitesmoke">『' + books[i].title + '』 ' + books[i].author + '<br>' + books[i].comment +'('+books[i].date.toLocaleDateString('sv-SE')+ ')'+'<br><br></div>';
+        s = s + '<div class="content">'+'<img src = "Cabinet/'+ (i+1)+'.jpg" width="30" >'+'<span style="background-color:whitesmoke">『' + books[i].title + '』 ' + books[i].author + '<br>' + books[i].comment +'('+books[i].date.toLocaleDateString('sv-SE')+ ')'+'<br><br></div>';
     }
     P.innerHTML = s;
 }
