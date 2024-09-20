@@ -1,10 +1,11 @@
 class bookClass {
-    constructor(imgSrc, title, author, comment, date ) { 
+    constructor(imgSrc, title,author, comment, date, year ) { 
         this.imgSrc = imgSrc;
         this.title = title;
         this.author = author;
         this.comment = comment;
         this.date = date;
+        this.year= year;
     }
     GetImgInfo() {  /* メソッド */
         return ;  /* x と y を足した値を返却する */
@@ -18,25 +19,29 @@ var books = [
     new bookClass('Cabinet/4.jpg','ディザインズ','五十嵐大介','読了。',new Date(2024, 9-1 , 14)),
     new bookClass('Cabinet/5.jpg','村上さんのところ','村上春樹','読み途中。',new Date(2024, 9-1 , 12)),
     new bookClass('Cabinet/6.jpg','スプートニクの恋人','村上春樹','思い出した。また読みたい。',new Date(2024, 9-1 , 16)),
-
 ]
 
-function WriteBookImage(){
+
+function WriteBookImage(x){
     var d = document.getElementById('bookImages');
-    for(let  i = 0; i < books.length; i++){
+    for(let  i = 0; i < x.length; i++){
         var img =  document.createElement('img');
-        img.setAttribute('src','Cabinet/' + (i+1) + '.jpg');
+        img.setAttribute('src',x[i].imgSrc);
         img.setAttribute('class', 'contentImg');
         img.setAttribute('id', (i+1));
         d.appendChild(img);
     }
 }
 
-function WriteBookComments(){
+function WriteBookComments(x){
     var P = document.getElementById('bookComments');
     var s = '<div class = "wrapper">'
-    for(let i = 0; i < books.length; i++){
-        s = s + '<div class="content">'+'<img src = "Cabinet/'+ (i+1)+'.jpg" width="30" >'+'<span style="background-color:whitesmoke">『' + books[i].title + '』 ' + books[i].author + '<br>' + books[i].comment +'('+books[i].date.toLocaleDateString('sv-SE')+ ')'+'<br><br></div>';
+    var y = '';
+    for(let i = 0; i < x.length; i++){
+        if(x[i].year != null){
+            y = '('+x[i].year+') ';
+        }
+        s = s + '<div class="content">'+'<img src = '+x[i].imgSrc+' width="30" >'+'<span style="background-color:whitesmoke">『' + x[i].title + '』'+ y + x[i].author + '<br>' + x[i].comment +'('+x[i].date.toLocaleDateString('sv-SE')+ ')'+'<br><br></div>';
     }
     P.innerHTML = s;
 }
@@ -56,7 +61,6 @@ window.addEventListener('load', function() {
 
 books[0].comment = 
 `
-スコット・フィッツジェラルド 村上春樹 編訳 <br>
 村上春樹好きで初スコットフィッツジェラルド。
 グレート・ギャツビーの映画は見たことあるけど。<br>
 『氷の宮殿』が一番好きだった。
