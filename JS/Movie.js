@@ -6,8 +6,13 @@ var movies = [
     new bookClass('Movie/4.jpg','ニューヨーカーの暮らし方 season3','ジョン・ウィルソン','', new Date(2024,9-1,18),'2024'),
     new bookClass('Movie/5.jpg','座頭市 血煙り街道','三隅研次','', new Date(2024,9-1,5),'1967'),
     new bookClass('Movie/6.jpg','introduction','ホン・サンス','', new Date(2024,8-1,28),'2022'),
+    new bookClass('Movie/7.jpg','プッシャー','ニコラス・ウィンディング・レフン','', new Date(2024,8-1,28),'1996'),
 ]
-
+movies[6].comment =
+`
+朝起きて少し肌寒かったから、ジャージ羽織ってこの映画見始めたら、
+主人公が全く同じジャージをほとんどのシーンで着ていてびっくりしたね。
+` 
 
 movies[5].comment = 
 `

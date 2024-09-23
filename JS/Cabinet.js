@@ -14,17 +14,19 @@ class bookClass {
 
 var books = [
     new bookClass('Cabinet/1.jpg','フィッツジェラルド10傑作選','スコット・フィッツジェラルド 村上春樹 編訳','読了',new Date(2024, 9 -1 , 12)),
-    new bookClass('Cabinet/2.jpg','中国行きのスロー・ボート','村上春樹 ','読み途中。',new Date(2024, 9 -1 , 13)),
+    new bookClass('Cabinet/2.jpg','中国行きのスロー・ボート','村上春樹 ','読み途中。',new Date(2024, 9 -1 , 20)),
     new bookClass('Cabinet/3.jpg','掃除婦のための手引書','ルシア・ベルリン 岸本佐知子 訳','読み途中。',new Date(2024, 9-1 , 12)),
     new bookClass('Cabinet/4.jpg','ディザインズ','五十嵐大介','読了。',new Date(2024, 9-1 , 14)),
-    new bookClass('Cabinet/5.jpg','村上さんのところ','村上春樹','読み途中。',new Date(2024, 9-1 , 12)),
+    new bookClass('Cabinet/5.jpg','村上さんのところ','村上春樹','読み途中。',new Date(2024, 9-1 , 23)),
     new bookClass('Cabinet/6.jpg','スプートニクの恋人','村上春樹','思い出した。また読みたい。',new Date(2024, 9-1 , 16)),
+    new bookClass('Cabinet/7.jpg','人間失格','太宰治','',new Date(2024, 9-1 , 22)),
+
 ]
 
 
 function WriteBookImage(x){
     var d = document.getElementById('bookImages');
-    for(let  i = 0; i < x.length; i++){
+    for(let  i = (x.length-1); i >= 0; i--){
         var img =  document.createElement('img');
         img.setAttribute('src',x[i].imgSrc);
         img.setAttribute('class', 'contentImg');
@@ -37,7 +39,7 @@ function WriteBookComments(x){
     var P = document.getElementById('bookComments');
     var s = '<div class = "wrapper">'
     var y = '';
-    for(let i = 0; i < x.length; i++){
+    for(let  i = (x.length-1); i >= 0; i--){
         if(x[i].year != null){
             y = '('+x[i].year+') ';
         }
@@ -59,6 +61,18 @@ window.addEventListener('load', function() {
     });
   });
 
+books[6].comment = 
+`
+散歩しながら朗読聞いた（オーディブル）。昼は駒沢公園の芝生で寝ながら、最後はたどり着いた三軒茶屋の公園のベンチで聞いていた。
+結構夢中になったし、面白かったんだと思う。最後の数節が耳に残っている。
+`
+
+books[1].comment =
+`
+本を読む場所を探して散歩をする一日を一週間ほど繰り返した。
+『土の中の小さな犬』が心に残っている。
+あと『貧乏な叔母さんの話』で寝ている彼女に電話をかけるところ。
+`;
 books[0].comment = 
 `
 村上春樹好きで初スコットフィッツジェラルド。
@@ -78,4 +92,9 @@ books[3].comment =
 二巻だけどこの本屋にもなかったから、一巻を読んだあと、残りは電子でかった思い出。
 でも、漫画の場合、電子のほうが絵がよく見えて、めちゃくちゃ感動する。
 これは発見だった。フラットな方が原稿に近いだろうし。
+`;
+
+books[4].comment =
+`
+適当に開いて読むと楽しい。電子版買おうかな。
 `
