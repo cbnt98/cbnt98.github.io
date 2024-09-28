@@ -22,7 +22,11 @@ var books = [
     new bookClass('Cabinet/7.jpg','人間失格','太宰治','',new Date(2024, 9-1 , 22)),
 
 ]
-
+function WriteLastContent(x){
+    var s = '<img src = '+x[(x.length-1)].imgSrc+' width="30" >'+'『' + x[(x.length-1)].title + '』'+ x[(x.length-1)].author +'('+x[(x.length-1)].date.toLocaleDateString('sv-SE')+ ')';
+    var div = document.getElementById('books');
+    div.innerHTML =s;
+}
 
 function WriteBookImage(x){
     var d = document.getElementById('bookImages');
