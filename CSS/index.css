@@ -103,8 +103,8 @@ li[id = "headerList"]{
 
 
 
-li[class="content"]{
-
+p{
+  max-width: 500px;
 }
 p[class = "contentComment"]{
   margin-top: 0px;

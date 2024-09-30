@@ -21,7 +21,6 @@
 
   <body>
     <script src="JS/jquery-3.7.1.min.js"></script>
-    <!-- <script src="JS/Home.js"></script> -->
     <img class="backGround" src="BGImg/5.jpg">
 
     <script> document.write(header);</script>
@@ -33,10 +32,9 @@
             <a href="SplendidOceanBlue.html">
             Splendid Ocean Blue
             </a>
-            <p class = "contentComment">
-                映画の感想<br>
-                <div id = 'books'></div>
-                <script>WriteLastContent(books);</script>
+            <p class = "contentComment" id ='movie'>
+                映画の感想
+                <script>WriteLastContent(movies,'movie');</script>
             </p>
             </span>
         </li>
@@ -45,8 +43,9 @@
             <a href="ThatsTheWayILikeIt.html">
                 That's The Way I Like It
             </a>
-            <p class = "contentComment">
+            <p class = "contentComment" id = 'music'>
                 買ったCD
+                <script>WriteLastContent(musics,'music');</script>
             </p>
             
         </li>
@@ -55,8 +54,9 @@
             <a href="Cabinet.html">
                 Cabinet
             </a>
-            <p class = "contentComment">
+            <p class = "contentComment" id = 'book'>
                 本棚にあるもの
+                <script>WriteLastContent(books,'book');</script>
             </p>
         </li>
         <li>
