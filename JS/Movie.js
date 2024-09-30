@@ -5,9 +5,24 @@ var movies = [
     new bookClass('Movie/3.jpg','オー！スジョン','ホン・サンス','', new Date(2024,8-1,30),'2000'),
     new bookClass('Movie/4.jpg','ニューヨーカーの暮らし方 season3','ジョン・ウィルソン','', new Date(2024,9-1,18),'2024'),
     new bookClass('Movie/5.jpg','座頭市 血煙り街道','三隅研次','', new Date(2024,9-1,5),'1967'),
-    new bookClass('Movie/6.jpg','introduction','ホン・サンス','', new Date(2024,8-1,28),'2022'),
-    new bookClass('Movie/7.jpg','プッシャー','ニコラス・ウィンディング・レフン','', new Date(2024,8-1,28),'1996'),
+    new bookClass('Movie/6.jpg','introduction','ホン・サンス','', new Date(2024,9-1,19),'2022'),
+    new bookClass('Movie/7.jpg','プッシャー','ニコラス・ウィンディング・レフン','', new Date(2024,9-1,23),'1996'),
+    new bookClass('Movie/8.jpg','プッシャー2','ニコラス・ウィンディング・レフン','', new Date(2024,9-1,30),'2004'),
+    new bookClass('Movie/9.jpg','ウィンディ＆ルーシー','ケリー・ライカート','', new Date(2024,9-1,27),'2008'),
+
+
 ]
+movies[8].comment =
+`
+一番好きな映画。出てくる人物が皆魅力的。人の親切心とかに涙出る。犬かわいい。
+`
+
+movies[7].comment =
+`
+前作から8年くらいたってるから、ミロがちょっと太っている。マッツ・ミケルセンはあんま変わらない。
+暴力とか、ドラックとかもう見たくなくなってきた。
+`
+
 movies[6].comment =
 `
 朝起きて少し肌寒かったから、ジャージ羽織ってこの映画見始めたら、
