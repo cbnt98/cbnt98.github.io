@@ -57,7 +57,7 @@ var header = `
 <header id="header">
 
 <div class="logo">羊の島</div>
-<div class="sublogo">Letters from the sheep land.</div>
+<div class="sublogo">( Letters from the sheep land. )</div>
 
 
   <ul id= "headerList">

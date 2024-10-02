@@ -57,6 +57,7 @@ div[class="logo"]{
 }
 div[class="sublogo"] {
   display: inline-flex;
+  margin-left: 20px;
   background-color: whitesmoke;
 }
 ul[id="headerList"]{
@@ -147,10 +148,9 @@ p[class = "mainBody"]{
 
 img[class = "contentImg"]{
   z-index: 1;
-  margin-right: 10px;
-  background-color: whitesmoke;
-  max-width: 25vw;
-  /* display: inline-block; */
+  margin-right: 14px;
+  /* max-width: 25vw; */
+  display: flex-block;
 }
 p[class = "imgComment"]{
   writing-mode: horizontal-tb;
