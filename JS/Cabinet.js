@@ -21,6 +21,8 @@ var books = [
     new bookClass('Cabinet/6.jpg','スプートニクの恋人','村上春樹','思い出した。また読みたい。',new Date(2024, 9-1 , 16)),
     new bookClass('Cabinet/7.jpg','人間失格','太宰治','',new Date(2024, 9-1 , 22)),
     new bookClass('Cabinet/8.jpg','フラニーとズーイ','サリンジャー 村上春樹 訳','',new Date(2024, 9-1 , 30)),
+    new bookClass('Cabinet/9.jpg','異邦人 ','カミュ 窪田啓作 訳','', new Date(2024, 9-1 , 30)),
+    new bookClass('Cabinet/10.jpg','歩くこと、または飼いならされずに詩的な人生を生きる術','トマス・エスペダル','',new Date(2024, 9-1 , 30)),
 
 ]
 function WriteLastContent(x,y){
