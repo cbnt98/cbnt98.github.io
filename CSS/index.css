@@ -51,7 +51,7 @@ div[class="logo"]{
   margin-top: 25px;
   display: inline-block;
   /* font-family: Arial, Helvetica, sans-serif; */
-  font-size: 30px;
+  font-size: 20px;
   background-color: whitesmoke;
   height: fit-content;
 }
@@ -149,7 +149,7 @@ p[class = "mainBody"]{
 img[class = "contentImg"]{
   z-index: 1;
   margin-right: 14px;
-  /* max-width: 25vw; */
+  max-width: 25vw;
   display: flex-block;
 }
 p[class = "imgComment"]{

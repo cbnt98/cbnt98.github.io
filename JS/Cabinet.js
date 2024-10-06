@@ -21,8 +21,9 @@ var books = [
     new bookClass('Cabinet/6.jpg','スプートニクの恋人','村上春樹','思い出した。また読みたい。',new Date(2024, 9-1 , 16)),
     new bookClass('Cabinet/7.jpg','人間失格','太宰治','',new Date(2024, 9-1 , 22)),
     new bookClass('Cabinet/8.jpg','フラニーとズーイ','サリンジャー 村上春樹 訳','',new Date(2024, 9-1 , 30)),
-    new bookClass('Cabinet/9.jpg','異邦人 ','カミュ 窪田啓作 訳','', new Date(2024, 9-1 , 30)),
+    new bookClass('Cabinet/9.jpg','異邦人 ','カミュ 窪田啓作 訳','', new Date(2024, 10-1 , 2)),
     new bookClass('Cabinet/10.jpg','歩くこと、または飼いならされずに詩的な人生を生きる術','トマス・エスペダル','',new Date(2024, 9-1 , 30)),
+    new bookClass('Cabinet/11.jpg','螢・納屋を焼く・その他の短編','村上春樹','',new Date(2024, 10-1 , 3)),
 
 ]
 function WriteLastContent(x,y){
@@ -71,8 +72,9 @@ window.addEventListener('load', function() {
 
 books[8].comment =
 `
-不条理についてよりも彼女マリイや、街の様子など、ムルソーが幸福を感じる描写が好きだった。
+不条理についてよりも彼女マリイと海で遊んだり、街の様子などに対してムルソーが幸福を感じる描写が好きだった。
 ”私ははじめて、世界の優しい無関心に、心をひらいた。これほど世界を自分に近いものと感じ、
+自分の兄弟のように感じると、私は、自分が幸福だったし、今もなお幸福であることを悟った。”
 `
 
 books[7].comment =
