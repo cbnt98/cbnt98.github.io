@@ -28,7 +28,7 @@ var books = [
 ]
 function WriteLastContent(x,y){
     var p = document.getElementById(y);
-    var s = p.innerHTML + '： '+x[(x.length-1)].date.toLocaleDateString('sv-SE')+'『' + x[(x.length-1)].title + '』'+ x[(x.length-1)].author;
+    var s = p.innerHTML + '<br>最終更新： '+x[(x.length-1)].date.toLocaleDateString('sv-SE')+'『' + x[(x.length-1)].title + '』'+ x[(x.length-1)].author;
 
     p.innerHTML =s;
 }
