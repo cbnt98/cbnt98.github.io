@@ -149,7 +149,7 @@ p[class = "mainBody"]{
 img[class = "contentImg"]{
   z-index: 1;
   margin-right: 14px;
-  max-width: 25vw;
+  max-width: 24vw;
   display: flex-block;
 }
 p[class = "imgComment"]{
