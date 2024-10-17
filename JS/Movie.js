@@ -16,6 +16,7 @@ var movies = [
     new bookClass('Movie/14.jpg','うなぎ','今村昌平','', new Date(2024,10-1,17),'1997'),
     new bookClass('Movie/15.jpg','蛇の道','黒沢清','', new Date(2024,10-1,17),'2024'),
     new bookClass('Movie/16.jpg','あなた自身と、あなたのこと','ホン・サンス','', new Date(2024,10-1,10),'2016'),
+    new bookClass('Movie/17.jpg','結婚のすべて','岡本喜八','', new Date(2024,10-1,19),'1958'),
 
 ]
 
