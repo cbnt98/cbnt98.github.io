@@ -13,6 +13,9 @@ var movies = [
     new bookClass('Movie/11.jpg','旅の始まり世界の終わり','黒沢清','', new Date(2024,10-1,6),'2019'),
     new bookClass('Movie/12.jpg','ポーラ X','レオス・カラックス','', new Date(2024,10-1,10),'1999'),
     new bookClass('Movie/13.jpg','美しき仕事','クレール・ドニ','', new Date(2024,10-1,10),'1999'),
+    new bookClass('Movie/14.jpg','うなぎ','今村昌平','', new Date(2024,10-1,17),'1997'),
+    new bookClass('Movie/15.jpg','蛇の道','黒沢清','', new Date(2024,10-1,17),'2024'),
+    new bookClass('Movie/16.jpg','あなた自身と、あなたのこと','ホン・サンス','', new Date(2024,10-1,10),'2016'),
 
 ]
 
