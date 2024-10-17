@@ -23,7 +23,8 @@ var books = [
     new bookClass('Cabinet/8.jpg','フラニーとズーイ','サリンジャー 村上春樹 訳','',new Date(2024, 9-1 , 30)),
     new bookClass('Cabinet/9.jpg','異邦人 ','カミュ 窪田啓作 訳','', new Date(2024, 10-1 , 2)),
     new bookClass('Cabinet/10.jpg','歩くこと、または飼いならされずに詩的な人生を生きる術','トマス・エスペダル','',new Date(2024, 9-1 , 30)),
-    new bookClass('Cabinet/11.jpg','螢・納屋を焼く・その他の短編','村上春樹','',new Date(2024, 10-1 , 3)),
+    new bookClass('Cabinet/11.jpg','螢・納屋を焼く・その他の短編','村上春樹','',new Date(2024, 10-1 , 17)),
+    new bookClass('Cabinet/12.jpg','棘まで美し','武者小路実篤','',new Date(2024, 10-1 , 17)),
 
 ]
 function WriteLastContent(x,y){
@@ -69,6 +70,15 @@ window.addEventListener('load', function() {
       });
     });
   });
+
+books[8].comment =
+`
+`
+books[10].comment =
+`
+『納屋を焼く』がかなり良かった。女友達の失踪、納屋を焼く男、真相に何も近づけない自分の感じ。『三つのドイツ幻想』のうち、後ろの2つが良かった。
+『ヘルWの空中庭園』の微妙に不思議な感じ、ヘルWという人物の魅力！
+`
 
 books[8].comment =
 `
