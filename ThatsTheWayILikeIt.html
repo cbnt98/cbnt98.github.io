@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex,unfollow">
+  <meta name="viewport" content="width=device-width">
+  
+  <title>羊の島</title>
+
+  <link rel="stylesheet" href="CSS/index.css">
+
+  <script src="JS/header.js"></script>
+  <script src="JS/PageInfo.js"></script>
+  <script src="JS/Cabinet.js"></script>
+  <script src="JS/Music.js"></script>
+</head>
+
+<body>
+  <script src="JS/jquery-3.7.1.min.js"></script>
+  <img class="backGround" src="BGImg/7.jpg">
+
+  <script> document.write(header);</script>
+
+  <div id = 'main'>
+    <p id="pageTitle"><span style="background-color:whitesmoke">
+      That's The Way I Like It
+    </p>
+  
+    <p><span style="background-color:whitesmoke">
+        中学まではCD、高校でiThunes、それ以降Apple Musicで主に音楽を聞いてきた。
+        それでも、iPodやカーステレオで音楽を聞くこともあるので、CDはちょいちょい買っている。
+        CDじゃないと、所有欲は満たせないし。<br>
+        あと、サブスクにないアルバムとかでめっちゃ好きなものもあるし。<br>
+        音楽の感想とかなんて書けばいいか分からんかも。
+    </p>
+
+    <div id = 'bookImages'></div>
+    <p id ='bookComments'></p>
+    
+  </div>
+  
+  <script>WriteBookComments(musics);</script>
+  <script>WriteBookImage(musics);</script>
+   </body>
+
+</html>
