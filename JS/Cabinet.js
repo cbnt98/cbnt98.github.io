@@ -12,6 +12,9 @@ class bookClass {
     }
 }
 
+const pagetop_btn = document.querySelector(".pagetop");
+
+
 var books = [
     new bookClass('Cabinet/1.jpg','フィッツジェラルド10傑作選','スコット・フィッツジェラルド 村上春樹 編訳','読了',new Date(2024, 9 -1 , 12)),
     new bookClass('Cabinet/2.jpg','中国行きのスロー・ボート','村上春樹 ','読み途中。',new Date(2024, 9 -1 , 20)),

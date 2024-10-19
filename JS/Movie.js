@@ -17,12 +17,19 @@ var movies = [
     new bookClass('Movie/15.jpg','蛇の道','黒沢清','', new Date(2024,10-1,17),'2024'),
     new bookClass('Movie/16.jpg','あなた自身と、あなたのこと','ホン・サンス','', new Date(2024,10-1,10),'2016'),
     new bookClass('Movie/17.jpg','結婚のすべて','岡本喜八','', new Date(2024,10-1,18),'1958'),
-    new bookClass('Movie/18.jpg','二重のまち／交代地のうたを編む','小森はるか','', new Date(2024,10-1,19),'2019'),
+    new bookClass('Movie/18.jpg','二重のまち／交代地のうたを編む','小森はるか','', new Date(2024,10-1,19),'2019 '),
+    new bookClass('Movie/19.jpg','映画館の恋','ホン・サンス','', new Date(2024,10-1,20),'2006'),
 
 ]
 
 movies[10].comment =
 `
+`
+movies[18].comment =
+`
+好き。2部目で目が覚めてきた。バキバキに感動した。やっぱホン・サンス好き。
+映画館出てから、街を見る目が変わった、というか、昔みたいに良い写真が今なら取れると思う。
+そういう視線の動きみたいなのを思い出した。
 `
 movies[16].comment =
 `
