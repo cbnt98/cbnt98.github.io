@@ -1,6 +1,17 @@
 const BlogName = 'Cabinet (キャビネット)';
 const BlogSubText = '家具的なブログ..';
 
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max+1);
+  return Math.floor(Math.random() * (max - min) + min); // 上限は除き、下限は含む
+}
+
+function setBgImg(x,y,z){
+  n = getRandomInt(x,y);
+  bg.setAttribute('src','BGImg/'+z+n+'.jpg');
+  return null;
+};
 class SubPageClass{
   constructor(title,file){
     this.title = title;
