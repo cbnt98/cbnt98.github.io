@@ -12,7 +12,7 @@ class bookClass {
     }
 }
 
-const pagetop_btn = document.querySelector(".pagetop");
+
 
 
 var books = [
@@ -72,7 +72,30 @@ window.addEventListener('load', function() {
         }, 500, 'swing');
       });
     });
-  });
+});
+
+
+
+
+window.addEventListener('load', function(){
+// セレクタ名（.pagetop）に一致する要素を取得
+pagetop_btn = document.querySelector(".pagetop");
+// .pagetopをクリックしたら
+pagetop_btn.addEventListener("click", function(){
+    window.scroll({ top: 0, behavior: "smooth" });
+});
+
+});
+
+// スクロールされたら表示
+window.addEventListener("scroll", function(){
+    if (window.pageYOffset > 100) {
+        pagetop_btn.style.opacity = "1";
+      } else if (window.pageYOffset < 100) {
+        pagetop_btn.style.opacity = "0";
+      }
+});
+
 
 books[8].comment =
 `
