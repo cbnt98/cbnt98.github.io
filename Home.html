@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex,unfollow">
+    <meta name="viewport" content="width=device-width">
+
+    <title>羊の島</title>
+
+    <link rel="stylesheet" href="CSS/index.css">
+
+    <script src="JS/header.js"></script>
+    <script src="JS/Cabinet.js"></script>
+    <script src="JS/Music.js"></script>
+    <script src="JS/Movie.js"></script>
+
+
+  </head>
+
+  <body>
+    <script src="JS/jquery-3.7.1.min.js"></script>
+    <img class="backGround" id = 'bg' src="BGImg/13.jpg">
+    <script>
+        var bg = document.getElementById('bg')
+        setBgImg(3,5,1);
+    </script>
+
+    <script> document.write(header);</script>
+
+    <div id = main>
+        <p id = "pageTitle"><span style="background-color:whitesmoke">Table of Contents</span></p>
+        <span style="background-color:whitesmoke">もくじ</span>
+        <li class = "content"><span style="background-color:whitesmoke">
+            <a href="SplendidOceanBlue.html">
+            Splendid Ocean Blue
+            </a>
+            <p class = "contentComment" id ='movie'>
+                映画の感想
+                <script>WriteLastContent(movies,'movie');</script>
+            </p>
+            </span>
+        </li>
+    
+        <li><span style="background-color:whitesmoke">
+            <a href="ThatsTheWayILikeIt.html">
+                That's The Way I Like It
+            </a>
+            <p class = "contentComment" id = 'music'>
+                買ったCD
+                <script>WriteLastContent(musics,'music');</script>
+            </p>
+            
+        </li>
+        <li>
+            <span style="background-color:whitesmoke">
+            <a href="Cabinet.html">
+                Cabinet
+            </a>
+            <p class = "contentComment" id = 'book'>
+                本棚にあるもの
+                <script>WriteLastContent(books,'book');</script>
+            </p>
+        </li>
+        <li>
+            <span style="background-color:whitesmoke">
+            <a href="about.html">
+                About
+            </a>
+            <p class = "contentComment">
+                自己紹介など
+            </p>
+        </li>
+        <div class="pagetop"><span style="background-color:yellow">Topへ戻る</span></div>
+
+    </div>
+    
+
+
+  </body>
+
+</html>  

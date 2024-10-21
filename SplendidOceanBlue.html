@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex,unfollow">
+  <meta name="viewport" content="width=device-width">
+  
+  <title>羊の島</title>
+
+  <link rel="stylesheet" href="CSS/index.css">
+
+  <script src="JS/header.js"></script>
+  <!-- <script src="JS/PageInfo.js"></script> -->
+  <script src="JS/Cabinet.js"></script>
+  <script src="JS/Movie.js"></script>
+
+</head>
+
+<body>
+  <script src="JS/jquery-3.7.1.min.js"></script>
+  <img class="backGround" src="BGImg/8.jpg">
+
+    <script> document.write(header);</script>
+  <div id = 'main'>
+    
+  
+    <p id="pageTitle"><span style="background-color:whitesmoke">
+      Splendid Ocean Blue
+    </span>
+    </p>
+
+    <p><span style="background-color:whitesmoke">
+      <!-- 見た映画の感想を記録しておく。<br> -->
+      <!-- <br> -->
+      映画館でも普通に眠くなる。
+    </span></p>
+          
+      <div id = 'bookImages'></div>
+      <p id ='bookComments'></p>
+
+    </p>
+    <div class="pagetop"><span style="background-color:rgb(255, 58, 180)">Topへ戻る</span></div>
+  </div>
+    <script>WriteBookComments(movies);</script>
+    <script>WriteBookImage(movies);</script>
+    
+   </body>
+
+</html>
