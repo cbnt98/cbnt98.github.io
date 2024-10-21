@@ -281,11 +281,11 @@ a:visited {
   /* height: 50px; */
   /* border-radius: 50%; */
   transition: .3s;
-  color: #00ff73;
+  color: #000000;
   
 /*   デフォルトは非表示 */
   opacity: 0;
 }
 .pagetop:hover {
-    box-shadow: 0 0 10px #00A6C4;
+    /* box-shadow: 0 0 10px #000000; */
 }
