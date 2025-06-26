@@ -12,6 +12,7 @@ function setBgImg(x,y,z){
   bg.setAttribute('src','BGImg/'+z+n+'.jpg');
   return null;
 };
+
 class SubPageClass{
   constructor(title,file){
     this.title = title;

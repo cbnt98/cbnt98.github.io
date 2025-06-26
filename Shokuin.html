@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex,unfollow">
+    <meta name="viewport" content="width=device-width">
+
+    <title>★愛の国★</title>
+
+    <link rel="stylesheet" href="CSS/ainokuni.css">
+
+    <script src="JS/header.js"></script>
+    <script src="JS/Cabinet.js"></script>
+    <script src="JS/Music.js"></script>
+    <script src="JS/Movie.js"></script>
+
+
+  </head>
+
+  <body>
+    <script src="JS/jquery-3.7.1.min.js"></script>
+    <img class="backGround" id = 'bg' src="BGImg/13.jpg">
+    <script>
+        var bg = document.getElementById('bg')
+        setBgImg(1,1,7);
+    </script>
+
+<header id="header">
+
+    <div class="logo">愛の国</div>
+    <div class="sublogo"> -小児性愛で生きづらさを抱えるあなたへ-</div>
+
+
+  <ul id= "headerList">
+    <li id = "headerList">
+      <a href="Ainokuni.html">
+        Home
+      </a>
+    </li>
+
+    <li id = "headerList">
+      <a href="truth.html">
+        真実の部屋
+      </a>
+    </li>
+    <li id = "headerList">
+      <a href="SplendidOceanBlue.html">
+        教授から、みなさんへ
+      </a>
+    </li>
+
+    <li id = "headerList">
+      <a href="Cabinet.html">
+        施設あんない
+      </a>
+    </li>
+
+    <li id = "headerList">
+      <a href="about.html">
+        愛の国とは
+      </a>
+    </li>
+    
+    <li id = "headerList">
+      <a href="Shokuin.html">
+        職員ページ
+      </a>
+    </li>
+  </ul>
+
+
+</header>
+
+    <div id = main>
+        <p id = "pageTitle"><span style="background-color:whitesmoke">職員ページ</span></p>
+        
+        <p>
+            <form action="#" method="post">
+	            <p>職員ID：<br>
+	            <input type="text" name="name"></p>
+	            <p>パスワード：<br>
+	            <input type="text" name="mail"></p>
+                <!-- <p><input type="submit" value="Enter->>"></p> -->
+                </form>
+                <button id="test1">Enter->></button>
+        </p>
+        <div class="pagetop"><span style="background-color:yellow">Topへ戻る</span></div>
+
+    </div>
+    
+<script>
+    const BUTTON_CLICK_EVENT= document.getElementById('test1');
+    BUTTON_CLICK_EVENT.addEventListener('click', () => {
+            // alert("ボタンがクリックされました");
+            window.open( 'http://127.0.0.1:3000/ShokuinHome.html', '愛の国＿職員ページ','width=900,height=700,toolbar=yes,menubar=yes,scrollbars=yes');
+    });
+
+</script>
+
+  </body>
+
+</html>  

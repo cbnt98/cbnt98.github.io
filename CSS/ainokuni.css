@@ -1,0 +1,259 @@
+
+*{
+  font-family: serif; 
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scrollbar-width: none !important;  
+  -ms-overflow-style: none !important; 
+}
+
+  body::-webkit-scrollbar{
+    display: none;
+  }
+/* html{
+  overflow-y: hidden;
+} */
+
+body{ 
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  /* 横書き */
+  /* -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl; */
+
+  margin: 0;
+  padding: 0;
+  position:relative;
+  background-color: white;
+  overflow-x: scroll;
+  flex-direction: row;
+}
+p{
+    text-align: center;
+}
+div[id='main']{
+    text-align: center;
+  /* margin-left: 25px; */
+  
+  /* max-width: 600px; */
+}
+
+li{
+  list-style-type: none;
+}
+
+/* ヘッダー */
+header{
+  /* margin-top: 10px; */
+
+  margin-left: 25px;    
+}
+div[class="logo"]{
+  /* margin-top: 25px; */
+  display: inline-block;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-size: 60px;
+  /* background-color: whitesmoke; */
+  height: fit-content;
+    text-align: center;
+}
+div[class="sublogo"] {
+  display: inline-flex;
+  margin-left: 20px;
+  background-color: whitesmoke;
+    font-size: 30px;
+}
+ul[id="headerList"]{
+  margin-top: 0px;
+  margin-left: -40px;
+  z-index: 1000;
+}
+li[id = "headerList"]{
+  display: inline-block;
+  margin-top: 10px;
+  margin-right: 20px;
+  z-index: 1;
+  background-color: whitesmoke;
+}
+
+
+p[class = "contentComment"]{
+  margin-top: 0px;
+  font-size: smaller;
+}
+
+
+
+/* 自作背景設定 */
+img[class = "backGround"]{
+  z-index: -10;
+  position: fixed;
+  /* display: flex; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: -10%;
+  border-width: 0cm;
+}
+
+p[id="pageTitle"]{
+  font-size: 20px;
+  font-family: serif;
+  margin-top: 60px;
+}
+
+p[class = "mainBody"]{
+  /* margin-right: 40px; */
+  min-height: 60%;
+  max-height: 75%;
+  background-color: whitesmoke;
+  z-index: 1;
+  
+}
+
+
+img[class = "contentImg"]{
+  z-index: 1;
+  margin-right: 14px;
+  max-width: 25vw;
+  display: flex-block;
+}
+p[class = "imgComment"]{
+  writing-mode: horizontal-tb;
+  display: inline-block;
+  /* margin-right: 20vh; */
+  /* margin-left: 10vh; */
+  margin-top: 0;
+  font-size: 14px;
+  text-align:center;
+  background-color: rgba(200,200,200, 0.5);
+  width: fit-content;
+}
+
+
+ul[class = "mainBody"]{
+  display: flex;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 40vh;
+}
+li[class = "mainBody"]{
+  display: inline-block;
+}
+
+
+
+.modal-wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(180,180,180,0.98);
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.25s ease-out;
+  
+
+   /* これを追加 */
+   overscroll-behavior: contain;
+   overflow-x: scroll;
+   scrollbar-width: none;
+   -ms-overflow-style: none;
+   touch-action: none;
+
+}
+
+.modal-wrapper.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-image {
+  position: absolute;
+  max-width: 95%;
+  max-height: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  opacity: 0;
+  transition: 0.5s ease-out;
+}
+
+.modal-image.show {
+  opacity: 1;
+}
+
+.modal-text {
+  writing-mode: horizontal-tb;
+  z-index: -10;
+  position: fixed;
+  bottom: 0;
+  font-size: 14px;
+  text-align:center;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease-out;
+}
+.modal-text.show {
+  opacity: 1;
+  z-index: 10;
+}
+.modal-next {
+  color: blue;
+}
+.modal-back {
+  color: blue;
+}
+
+
+ul>img[class='contentImg']{
+    z-index: 1;
+
+    margin-top: 5vh;
+    margin-right: 25px;
+    margin-left: 20px;
+    
+    /* height: 200px; */
+    max-height: 20vh;
+    max-width: 50vw;
+    background-color: whitesmoke;
+    display: inline-block;
+}
+
+input[type = 'button']{
+  width:3em; height:10em;  border: dashed 1px #906e84; border-radius: 10px; cursor: pointer; background-color: #eee;
+}
+
+a:visited {
+  color:mediumblue;
+}
+
+.whitebox{
+  margin-top: 10vh;
+}
+
+.pagetop {
+  cursor: pointer;
+  position: fixed;
+  right: 30px;
+  text-align: right;
+  bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 50px; */
+  /* height: 50px; */
+  /* border-radius: 50%; */
+  transition: .3s;
+  color: #000000;
+  
+/*   デフォルトは非表示 */
+  opacity: 0;
+}
+.pagetop:hover {
+    /* box-shadow: 0 0 10px #000000; */
+}

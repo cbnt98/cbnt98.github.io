@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex,unfollow">
+    <meta name="viewport" content="width=device-width">
+
+    <title>★愛の国★</title>
+
+    <link rel="stylesheet" href="CSS/ainokuni.css">
+
+    <script src="JS/header.js"></script>
+    <script src="JS/Cabinet.js"></script>
+    <script src="JS/Music.js"></script>
+    <script src="JS/Movie.js"></script>
+    <style>
+        .kaiinn{
+            width:150px;
+            height:200px;
+            margin: auto;
+            display: block;
+            margin-top: 20px;
+              z-index: 1;
+
+        }
+        body{
+            margin-bottom: 100px;
+        }
+    </style>
+
+  </head>
+
+  <body>
+    <script src="JS/jquery-3.7.1.min.js"></script>
+    <img class="backGround" id = 'bg' src="BGImg/13.jpg">
+    <script>
+        var bg = document.getElementById('bg')
+        setBgImg(1,1,8);
+
+        
+    </script>
+
+<header id="header">
+
+    <div class="logo">愛の国　職員ページ</div>
+
+
+</header>
+
+    <div id = main>
+        <p id = "pageTitle"><span style="background-color:whitesmoke">★会員情報★</span></p>
+        <span style="background-color:whitesmoke"></span>
+        <img src="Shokuin/1.jpg" class='kaiinn'>
+            <a>1,ジャニー</a>
+        <img src="Shokuin/1.jpg" class='kaiinn'>
+        <a>1,ジャニー</a>
+        <img src="Shokuin/1.jpg" class='kaiinn'>
+        <a>1,ジャニー</a>
+        <img src="Shokuin/1.jpg" class='kaiinn'>
+        <a>1,ジャニー</a>
+        <img src="Shokuin/1.jpg" class='kaiinn'>
+        <a>1,ジャニー</a>
+        <img src="Shokuin/1.jpg" class='kaiinn'>
+        <a>1,ジャニー</a>
+        <img src="Shokuin/1.jpg" class='kaiinn'>
+        <a>1,ジャニー</a>
+        <img src="Shokuin/1.jpg" class='kaiinn'>
+        <a>1,ジャニー</a>
+        <img src="Shokuin/3.jpg" class='kaiinn' id ='daisaku'>
+        
+
+        <span id="button"></span>
+        <!-- <button type="submit"><img src="Shokuin/3.jpg" class='kaiinn' /></button> -->
+        <a>64,大作</a>
+
+        <div class="pagetop"><span style="background-color:yellow">Topへ戻る</span></div>
+
+    </div>
+    
+    <script>
+        function clickListener () {
+            window.open( 'http://127.0.0.1:3000/Daisaku.html', '愛の国＿職員ページ');
+            console.log('adfsd');
+        }
+        var daisaku = document.getElementById('daisaku');
+        // document.querySelectorAll("img").forEach((imgElm) => {
+        //         imgElm.addEventListener('click', clickListener());
+        //     })
+        daisaku.addEventListener('click', function() {
+            window.open( 'http://127.0.0.1:3000/Daisaku.html', '愛の国＿職員ページ'),'width=900,height=700,toolbar=yes,menubar=yes,scrollbars=yes';
+            console.log('adfsd');
+        });
+    </script>
+
+
+  </body>
+
+</html>  
