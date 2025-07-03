@@ -14,7 +14,11 @@
   overflow-y: hidden;
 } */
 
+
+
+
 body{ 
+  background: url("92.jpg") repeat;
   text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -30,6 +34,7 @@ body{
   overflow-x: scroll;
   flex-direction: row;
 }
+
 p{
     text-align: center;
 }
