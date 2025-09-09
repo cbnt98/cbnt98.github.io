@@ -1,80 +1,81 @@
 const gulp = require("gulp");
 const pug = require("gulp-pug");
 
-var notify       = require("gulp-notify");
-var plumber      = require("gulp-plumber");
-var sass         = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
-var uglify       = require('gulp-uglify');
-var browserSync  = require("browser-sync");
+const notify = require('gulp-notify');  // エラー通知
+const plumber = require('gulp-plumber'); // エラー時のタスク停止防止
+const debug = require('gulp-debug'); // ログ表示
+const filter = require('gulp-filter'); // ファイルフィルター
 
-function compilePug() {
-　 // コンパイル前のファイルのパス
-  return gulp.src("./src/**/*.pug", "!./src/**/_*.pug")
-  // コンパイルの処理を書く
-  .pipe(pug({
-    pretty: true
-  }))
-  // コンパイル後のファイルのパス
-  .pipe(gulp.dest("./public"))
-} 
+const htmlbeautify = require('gulp-html-beautify'); // HTML整形
 
-exports.compilePug = compilePug;
+const paths = {
+  pug: {
+    src: 'src/pug/**/*.pug', // コンパイル対象
+    dest: 'public/' // 出力先
+  }
+}
 
-const htmlbeautify = require("gulp-html-beautify")
-
-gulp.task('pug', function () {
-  return gulp
-    .src([SRC + '**/*.pug', '!' + SRC + '**/_*.pug'])
+/**
+ * pugタスク
+ */
+function pugCompile() {
+  return gulp.src(paths.pug.src)
+    .pipe(plumber({
+      errorHandler: notify.onError('Error: <%= error.message %>')
+    }))
+    .pipe(filter(function (file) { // _から始まるファイルを除外
+      return !/\/_/.test(file.path) && !/^_/.test(file.relative);
+    }))
     .pipe(pug())
     .pipe(htmlbeautify({
-      "indent_size": 2,
-      "indent_char": " ",
-      "max_preserve_newlines": 0,
-      "preserve_newlines": false,
-      "extra_liners": [],
+      eol: '\n',
+      indent_size: 2,
+      indent_char: ' ',
+      indent_with_tabs: false,
+      end_with_newline: true,
+      preserve_newlines: true,
+      max_preserve_newlines: 2,
+      indent_inner_html: true,
+      brace_style: 'collapse',
+      indent_scripts: 'normal',
+      wrap_line_length: 0,
+      wrap_attributes: 'auto'
     }))
-    .pipe(gulp.dest(DIST));
-});
-
-//Sass
-var sassOptions = {
-  outputStyle: 'compressed'//圧縮設定 nested, expanded, compact, compressed
+    .pipe(gulp.dest(paths.pug.dest))
+    .pipe(debug({title: 'pug dest:'}));
 }
-gulp.task('sass', function () {
-  gulp.src('./src/scss/' + '**/*.scss')
-    .pipe(plumber({ errorHandler: notify.onError("Error: <%= error.message %>") }))
-    .pipe(sass(sassOptions))
-    .pipe(autoprefixer())
-    .pipe(gulp.dest('./public/assets/CSS'))
-});
-//JS圧縮
-gulp.task('js', function () {
-  gulp.src('./src/js' + '**/*.js')
-    .pipe(plumber())
-    .pipe(uglify())
-    .pipe(gulp.dest('./public/assets/JS'));
-});
-//BrowserSync
-gulp.task('browser-sync', () => {
-  browserSync({
-    server: {
-      baseDir: './public/'
-    }
-  });
-  gulp.watch('./public/' + "**/*.html", ['reload']);
-  gulp.watch('./public/assets/CSS' + "**/*.css", ['reload']);
-  gulp.watch('./public/assets/JS' + "**/*.js", ['reload']);
-});
-gulp.task('reload', () => {
-  browserSync.reload();
-});
 
-//watch
-gulp.task('watch', function () {
-  gulp.watch('./src/scss/' + '**/*.scss', ['scss']);
-  gulp.watch('./src/js' + '**/*.js', ['js']);
-});
+exports.pug = pugCompile; // pugタスク
+exports.default = gulp.series(pugCompile); // defaultタスク
 
-gulp.task('default', ['browser-sync', 'watch']);
+
+// function compilePug() {
+// 　 // コンパイル前のファイルのパス
+//   return gulp.src("./src/**/*.pug", "!./src/**/_*.pug")
+//   // コンパイルの処理を書く
+//   .pipe(pug({
+//     pretty: true
+//   }))
+//   // コンパイル後のファイルのパス
+//   .pipe(gulp.dest("./dist"))
+// } 
+
+// exports.compilePug = compilePug;
+
+// const htmlbeautify = require("gulp-html-beautify")
+
+// gulp.task('pug', function () {
+//   return gulp
+//     .src([SRC + '**/*.pug', '!' + SRC + '**/_*.pug'])
+//     .pipe(pug())
+//     .pipe(htmlbeautify({
+//       "indent_size": 2,
+//       "indent_char": " ",
+//       "max_preserve_newlines": 0,
+//       "preserve_newlines": false,
+//       "extra_liners": [],
+//     }))
+//     .pipe(gulp.dest(DIST));
+// });
+
 
