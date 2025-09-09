@@ -9,7 +9,7 @@ function getRandomInt(min, max) {
 
 function setBgImg(x,y,z){
   n = getRandomInt(x,y);
-  bg.setAttribute('src','BGImg/'+z+n+'.jpg');
+  bg.setAttribute('src','assets/BGImg/'+z+n+'.jpg');
   return null;
 };
 

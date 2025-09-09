@@ -45,7 +45,7 @@ function WriteBookImage(x){
     var d = document.getElementById('bookImages');
     for(let  i = (x.length-1); i >= 0; i--){
         var img =  document.createElement('img');
-        img.setAttribute('src',x[i].imgSrc);
+        img.setAttribute('src','assets/' + x[i].imgSrc);
         img.setAttribute('class', 'contentImg');
         img.setAttribute('id', (i+1));
         d.appendChild(img);
@@ -60,7 +60,7 @@ function WriteBookComments(x){
         if(x[i].year != null){
             y = '('+x[i].year+') ';
         }
-        s = s + '<div class="content">'+'<img src = '+x[i].imgSrc+' width="30" >'+'<span style="background-color:whitesmoke">『' + x[i].title + '』'+ y + x[i].author + '<br>' + x[i].comment +'('+x[i].date.toLocaleDateString('sv-SE')+ ')'+'<br><br></div>';
+        s = s + '<div class="content">'+'<img src = '+ 'assets/'+x[i].imgSrc+' width="30" >'+'<span style="background-color:whitesmoke">『' + x[i].title + '』'+ y + x[i].author + '<br>' + x[i].comment +'('+x[i].date.toLocaleDateString('sv-SE')+ ')'+'<br><br></div>';
     }
     P.innerHTML = s;
 }

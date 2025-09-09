@@ -16,6 +16,22 @@
   overflow-y: hidden;
 } */
 
+#jyani{
+  z-index: 99;
+  max-width: 100px;
+  position: absolute;
+   animation: test-animation 10s infinite;
+}
+@keyframes test-animation {
+            50% {
+                margin-left:100%;
+                margin-top:30%;
+            }
+            100% {
+                margin-left:0%;
+            }
+}
+
 body{ 
   text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;

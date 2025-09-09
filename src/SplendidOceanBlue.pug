@@ -1,0 +1,30 @@
+html(lang="ja")
+    head
+        meta(charset="UTF-8")
+        meta(name="robots", content="noindex,unfollow")
+        meta(name="viewport", content="width=device-width")
+        title ★愛の国★
+        link(rel="stylesheet", href="assets/CSS/index.css")
+        script(src="assets/JS/header.js")
+        //- script(src="assets/JS/PageInfo.js")
+        script(src="assets/JS/Cabinet.js")
+        script(src="assets/JS/Movie.js")
+    body 
+        script(src="assets/JS/jquery-3.7.1.min.js")
+        img.backGround#bg(src="assets/BGImg/8.jpg")
+        //- script
+            var bg = document.getElementById('bg')
+            setBgImg(1,2,2);
+        script document.write(header);
+
+        #main 
+            p#pageTitle
+                span(style="background-color:whitesmoke") Xanadu
+            p
+                span(style="background-color:whitesmoke") 打倒、フィルマークス！
+            #bookImages
+            p#bookComments
+            .pagetop
+                span(style="background-color:rgb(255, 58, 180)") Topへ戻る  
+        script WriteBookComments(movies);
+        script WriteBookImage(movies);

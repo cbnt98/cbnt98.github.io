@@ -1,0 +1,33 @@
+{
+  "name": "cbnt98.github.io",
+  "version": "1.0.0",
+  "description": "やりたいこと\r ・写真見せる\r ・ブログのコード自力で書いて、楽しむ。",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cbnt98/cbnt98.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cbnt98/cbnt98.github.io/issues"
+  },
+  "homepage": "https://github.com/cbnt98/cbnt98.github.io#readme",
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "gulp": "^5.0.1",
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-notify": "^5.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^6.0.1",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "gulp-uglify": "^3.0.2",
+    "typescript": "^5.9.2"
+  }
+}
