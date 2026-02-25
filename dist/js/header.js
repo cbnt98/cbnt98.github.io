@@ -85,14 +85,14 @@ var header = `
       </a>
     </li>
     <li id = "headerList">
-      <a href="SplendidOceanBlue.html">
-        Xanadu
+      <a href="Movie.html">
+        ＣＤとカセット棚
       </a>
     </li>
     
     <li id = "headerList">
-      <a href="ThatsTheWayILikeIt.html">
-        Hotel By The River
+      <a href="Music.html">
+        映画コーナー
       </a>
     </li>
 
