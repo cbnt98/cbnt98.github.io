@@ -81,7 +81,7 @@
             dvd.src = 'assets/Img/j' + n + '.png';
             x += dx;
             y += dy;
-            if (x < 0 || x > window.innerWidth - dvd.offsetWidth) {
+            if (x < -200 || x > window.innerWidth + 200 - dvd.offsetWidth) {
                 dx = -dx;
                 if ( n === m ) {
                     n = 0;
@@ -89,7 +89,7 @@
                     n = n + 1;
                 }
             }
-            if (y < 0 || y > window.innerHeight - dvd.offsetHeight) {
+            if (y < -200 || y > window.innerHeight + 200 - dvd.offsetHeight) {
                 dy = -dy;
                 if ( n === m ) {
                     n = 0;
@@ -103,5 +103,6 @@
         }
         animate();
     </script>
+
   </body>
 </html>
