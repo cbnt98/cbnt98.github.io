@@ -68,8 +68,8 @@ function writeHeader(){
 var header = `
 <header id="header">
 
-<div class="logo">愛の国</div>
-<div class="sublogo"> ＿＿エロサイトです。 </div>
+<div class="logo">なんかいいタイトルほしい。</div>
+<div class="sublogo"> ＿＿こんにちは！まじまのWeｂサイトです。 </div>
 
 
   <ul id= "headerList">
@@ -81,24 +81,24 @@ var header = `
 
     <li id = "headerList">
       <a href="truth.html">
-        真実の部屋
+        blog
       </a>
     </li>
     <li id = "headerList">
       <a href="movie.html">
-        ＣＤとカセット棚
+         映画コーナー
       </a>
     </li>
     
     <li id = "headerList">
       <a href="music.html">
-        映画コーナー
+        音楽
       </a>
     </li>
 
     <li id = "headerList">
       <a href="Cabinet.html">
-        Cabinet
+        本棚
       </a>
     </li>
 
