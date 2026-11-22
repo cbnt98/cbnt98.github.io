@@ -68,8 +68,8 @@ function writeHeader(){
 var header = `
 <header id="header">
 
-<div class="logo">なんかいいタイトルほしい。</div>
-<div class="sublogo"> ＿＿こんにちは！まじまのWeｂサイトです。 </div>
+<div class="logo">活動するぞ</div>
+<div class="sublogo"> ＿＿まじまのWeｂサイトです。 </div>
 
 
   <ul id= "headerList">
