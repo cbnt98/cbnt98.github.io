@@ -40,31 +40,31 @@
     </div>
 
     <script src="js/jquery-3.7.1.min.js"></script>
-    <img class="backGround" id="bg" src="assets/BGImg/1.jpg"/>
+    <img class="backGround" id="bg" src="assets/BGImg/12.jpg"/>
     <script>document.write(header);</script>
     <div id="main"> 
       <p id="pageTitle"><span style="background-color:whitesmoke">★愛の国へようこそ！★</span></p>
       <p></p><span style="background-color:whitesmoke">もくじ</span>
-      <li class="content"><span style="background-color:whitesmoke"><a href="truth.html">☆真実の部屋</a></span>
-        <p class="contentComment" id="truth">工事中。文章を書いていく予定。テーマなし。</p>
+      <li class="content"><span style="background-color:whitesmoke"><a href="truth.html">☆blog</a></span>
+        <p class="contentComment" id="truth">テーマあり。これが私の活動です。</p>
       </li>
-      <li class="content"><span style="background-color:whitesmoke"><a href="SplendidOceanBlue.html">☆Xanadu</a></span>
+      <li class="content"><span style="background-color:whitesmoke"><a href="SplendidOceanBlue.html">☆映画コーナー</a></span>
         <p class="contentComment" id="movie">映画の感想
           <script>WriteLastContent(movies,'movie');</script>
         </p>
       </li>
-      <li><span style="background-color:whitesmoke"><a href="ThatsTheWayILikeIt.html">☆Hotel By The River</a></span>
-        <p class="contentComment" id="music">買ったCD
+      <li><span style="background-color:whitesmoke"><a href="ThatsTheWayILikeIt.html">☆音楽コーナー</a></span>
+        <p class="contentComment" id="music">もってるＣＤとかレコードのレビューです。
           <script>WriteLastContent(musics,'music');</script>
         </p>
       </li>
-      <li><span style="background-color:whitesmoke"><a href="Cabinet.html">☆Cabinet</a></span>
-        <p class="contentComment" id="book">本棚にあるもの
+      <li><span style="background-color:whitesmoke"><a href="Cabinet.html">☆本棚</a></span>
+        <p class="contentComment" id="book">読んだ本の意義あるメモ。
           <script>WriteLastContent(books,'book');</script>
         </p>
       </li>
       <li><span style="background-color:whitesmoke"><a href="about.html">☆About</a></span>
-        <p class="contentComment">この国についてや、自己紹介など </p>
+        <p class="contentComment">自己紹介、制作物のリンク</p>
       </li>
       <div class="pagetop"><span style="background-color:yellow">Topへ戻る</span></div>
     </div>
@@ -74,9 +74,9 @@
         let n = 0;
         let m = 1;
         let x = Math.random() * (window.innerWidth - 160);
-        let y = Math.random() * (window.innerHeight - 160);
-        let dx = (Math.random() - 1.5) * 2;
-        let dy = (Math.random() - 1.5) * 2;
+        let y = Math.random() * (window.innerHeight - 60);
+        let dx = (Math.random() - 1.5) * 6;
+        let dy = (Math.random() - 1.5) * 4;
         function animate() {
             dvd.src = 'assets/Img/j' + n + '.png';
             x += dx;
